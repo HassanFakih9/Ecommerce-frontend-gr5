@@ -1,0 +1,11 @@
+.latestProducts{
+    margin-bottom: 75px;
+}
+.product-display{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}

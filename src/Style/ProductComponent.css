@@ -1,0 +1,32 @@
+.product{
+    margin-right: 20px;
+}
+
+.image-product{
+    height: 300px;
+    width: 300px;
+    border: 2px solid #656FC7;
+    margin-bottom: 20px;
+}
+
+.product-information{
+    display: flex;
+    width: 300px;
+    border: 2px solid #656FC7;
+}
+.product-name{
+    width: 75%;
+    color: #656FC7;
+    font-weight: 500;
+    padding:10px;
+}
+
+.add-to-cart{
+    width: 25%;
+    background-color: #656FC7;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    padding:10px;
+}

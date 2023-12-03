@@ -1,0 +1,55 @@
+.header{
+    background-color: #656FC7;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container{
+    margin-top: 20px;
+    background-color: #F8F8F8;
+    width: 95%;
+    border-radius: 25px;
+}
+.rowFlex{
+    display: flex;
+
+}
+.inside-header-container{
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigText{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: #656FC7;
+}
+.smallText{
+    font-size: 20px;
+    color: #656FC7;
+    margin-bottom: 30px;
+}
+.shopBtn{
+    width: 150px;
+    height: 40px;
+    background-color: #656FC7;
+    color:#F8F8F8 ;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.gif{
+    width: 450px;
+    height: 450px;
+}
