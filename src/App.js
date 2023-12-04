@@ -6,7 +6,7 @@ import Footer from "./Components/Footer";
 import LatestProducts from "./Components/LatestProducts";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-import Contact from "./Components/contact";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
