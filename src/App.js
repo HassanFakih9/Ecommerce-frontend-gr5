@@ -5,6 +5,9 @@ import CustomerReview from "./Components/CustomerReview";
 import Footer from "./Components/Footer";
 import LatestProducts from "./Components/LatestProducts";
 import Login from "./Components/Login";
+import Signup from "./Components/Signup";
+import Contact from "./Components/contact";
+
 function App() {
   return (
     <div className="App">
@@ -13,8 +16,11 @@ function App() {
      <Banner/>
      <LatestProducts/>
      <CustomerReview/>
-     <Footer/> */}
-     <Login/>
+     <Footer/> }
+  <Login/>
+     <Signup/>*/
+     <Contact/>
+    }
     </div>
   );
 }

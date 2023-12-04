@@ -1,0 +1,36 @@
+
+.signup{
+    display: flex;
+    height: 110vh;
+    
+}
+.signup-div{
+    background-color: #675fc7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    width: 50%;
+}
+.signup-div p{
+    font-size: larger;
+}
+
+.signup-image {
+    height: 400px;
+    width: 400px;
+    margin-bottom: 15px;
+    
+}
+.signup-title {
+    font-size: 40px;
+    text-align: center;
+    color: #675fc7;
+    font-weight: bold;
+}
+.close-img{ 
+    height: 50px;
+    width: 50px;
+}
