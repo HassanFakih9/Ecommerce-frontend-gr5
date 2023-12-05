@@ -30,3 +30,26 @@
     font-weight: bold;
     padding:10px;
 }
+.productbtn-add {
+    background-color: #675fc7;
+    border: none;
+    height: 40px;
+    width: 150px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.productbtn-quantity {
+    background-color: #675fc7;
+    border: none;
+    height: 40px;
+    width: 150px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 30px;
+}

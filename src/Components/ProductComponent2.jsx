@@ -23,6 +23,12 @@ const ProductComponent2 = () => {
                         Webcam <br /> Bluetooth<br />      Wifi 802.11 <br />     Windows 10 </p>
                         <p className='product-model'> Model:14-dq0052dx   SKU:6499749</p>
                         <p className='product-price'>$299.3</p>
+                        <button type="button" className="productbtn-quantity">
+                        Quantity 
+                    </button>
+                    <button type="button" className="productbtn-add">
+                        Add to Chart 
+                    </button>
                 </div>
             </div>
             <div className='product-similar'>
