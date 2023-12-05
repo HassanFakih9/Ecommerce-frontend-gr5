@@ -1,0 +1,58 @@
+.productcomp-name{
+    color: #657fc6;
+
+    
+
+}
+
+.productcomp-title{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+   
+}
+.product{ text-align: center;
+    justify-content: center;
+margin-left: 150px;}
+
+.productdetail{
+  
+    align-items: center;
+    
+    justify-content: center;
+    color:#657fc7;
+    margin-left: 150px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.product-model{
+    color:#675FC7;
+
+ }
+ .product-laptop
+ { display: flex;
+flex-direction: row;}
+.product-laptop img{ 
+    margin-top: 50px;
+    height: 300px;
+    width: 400px;
+    margin-left: 50px;
+}
+.productcomp-name{ 
+    margin-left: 50px;
+}
+.product-laptop{ 
+    color: #657fc7;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+}
+
+.product-price{ 
+    font-size: 40px;
+    color:black;
+    font-weight: bold;
+}

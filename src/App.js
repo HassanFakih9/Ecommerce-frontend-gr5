@@ -7,6 +7,8 @@ import LatestProducts from "./Components/LatestProducts";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import Contact from "./Components/Contact";
+import ProductComponent from "./Components/ProductComponent";
+import ProductComponent2 from "./Components/ProductComponent2";
 
 function App() {
   return (
@@ -18,8 +20,9 @@ function App() {
      <CustomerReview/>
      <Footer/> }
   <Login/>
-     <Signup/>*/
-     <Contact/>
+     <Signup/>
+     <Contact/>*/
+     <ProductComponent2/>
     }
     </div>
   );
