@@ -40,3 +40,6 @@ padding: 0;
     margin-left: 40px;
     cursor: pointer;
 }
+a{
+    text-decoration: none
+}

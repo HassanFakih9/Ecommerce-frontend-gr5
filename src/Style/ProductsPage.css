@@ -1,0 +1,24 @@
+.selectBar{
+    width: 100%;
+    height: 50px;
+    background-color: #675FC7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.selectCategory{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px ;
+}
+.inputProduct{
+    width: 150px;
+    height: 15px;
+    border-radius: 20px ;
+    border: none;
+    margin-right: 5%;
+    padding: 10px;
+}
