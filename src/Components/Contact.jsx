@@ -9,7 +9,7 @@ import facebook from '../images/facebook.svg'
 import intagram from '../images/instagram.svg'
 import twitter from '../images/twitter.svg'
 import callcenter2 from '../images/callcenter2.png'
-
+import faq from '../images/Faq2.png'
 const Contact = () => {
     return (
         <div className="contactus">
@@ -79,18 +79,54 @@ const Contact = () => {
                         <h1> Find Us On </h1>
                         <img src={callcenter2} />
                     </div>
-                    <div class="contact-email">
+                    <div class="contact-email1">
                         <img src={facebook} />
                         <img src={intagram} />
                         <img src={twitter} />
 
                     </div>
-
                 </div>
-
-
             </div>
-        </div >
+            <div className='contact-faq'>
+
+                <div className="faq-part1">
+                    <div className="faq-image">
+                        <img src={faq} />
+                    </div>
+                    <div className='faq-QA'>
+                        <div className='faq-question'>
+                            <p> What payment do you accept ?</p>
+                        </div>
+                        <div className='faq-answer'>
+                            <p> Cash on delivery</p>
+                        </div>
+
+                        <div className='faq-question'>
+                            <p> When i will receive my order?</p>
+                        </div>
+                        <div className='faq-answer'>
+                            <p> 24 to 48 hours</p>
+
+                        </div>
+                        <div className='faq-question'>
+                            <p> Where are you located?</p>
+                        </div>
+                        <div className='faq-answer'>
+                            <p>All Across the middle east </p>
+                        </div>
+                        <div className='faq-question'>
+                            <p> Do you have extra fees?</p>
+                        </div>
+                        <div className='faq-answer'>
+                            <p>No extra fees </p>
+                        </div>
+                    </div>
+                </div >
+            </div>
+            <Footer />
+        </div>
+
+
     )
 };
 
