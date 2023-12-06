@@ -32,7 +32,7 @@ const ProductComponent2 = () => {
             <div className='productcomp-title'>
                 <div className='product'>
                     <h1 className='productcomp-name'> HP Pavillon DV6</h1>
-                    <img src={hppavillon} />
+                    <img src={hppavillon} className='product-hppavillon' />
                 </div>
 
                 <div className='productdetail'>
@@ -68,7 +68,8 @@ const ProductComponent2 = () => {
                 </div>
             </div>
 
-           <Footer />
+
+            <Footer />
         </div>
     )
 }
