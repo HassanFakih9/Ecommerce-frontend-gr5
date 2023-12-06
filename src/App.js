@@ -21,8 +21,9 @@ function App() {
      <Footer/> }
   <Login/>
      <Signup/>
-     <Contact/>*/
-     <ProductComponent2/>
+     <Contact/>
+     <ProductComponent2/>*/
+     <Login/>
     }
     </div>
   );

@@ -1,7 +1,6 @@
 import '../Style/ProductComponent2.css'
 import MenuBar from './MenuBar';
 import Footer from './Footer';
-import image from '../images/laptop.jpeg'
 import hppavillon from '../images/HPpavillonDV6.jpg'
 import laptop1 from '../images/laptop1.jpeg'
 import laptop2 from '../images/laptop2.jpg'
@@ -11,22 +10,21 @@ import arrowdown from '../images/arrowdown.svg'
 import { useEffect, useState } from 'react';
 
 
-
-    
-
 const ProductComponent2 = () => {
     const [quantity, setQuantity] = useState(1);
     useEffect(() => {
 
-    }, );
+    },);
     const handledecrement = () => {
-        if(quantity >1){
-        setQuantity(prevCount => prevCount - 1);
-    }}
+        if (quantity > 1) {
+            setQuantity(prevCount => prevCount - 1);
+        }
+    }
     const handleincrement = () => {
-        if(quantity <10){
-        setQuantity(prevCount => prevCount + 1);
-    }}
+        if (quantity < 10) {
+            setQuantity(prevCount => prevCount + 1);
+        }
+    }
     return (
         <div>
 
@@ -45,7 +43,7 @@ const ProductComponent2 = () => {
                     <p className='product-price'>$299.3</p>
                     <img src={arrowup} onClick={handleincrement} className='product-arrowup' />
                     <button type="button" className="productbtn-quantity"> {quantity}  </button>
-                    
+
                     <img src={arrowdown} onClick={handledecrement} className='product-arrowdown' />
                     <button type="button" className="productbtn-add">
                         Add to Chart
@@ -70,13 +68,7 @@ const ProductComponent2 = () => {
                 </div>
             </div>
 
-
-
-
-
-
-
-            <Footer />
+           <Footer />
         </div>
     )
 }
