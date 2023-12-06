@@ -42,14 +42,29 @@
     font-size: 20px;
 }
 .productbtn-quantity {
-    background-color: #675fc7;
+    background-color: #ffffff;
     border: none;
     height: 40px;
     width: 150px;
-    color: white;
+    color: #675fc7;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     font-size: 20px;
+   
+    border:2px solid #675fc7;
+
+}
+.product-arrowdown {
+    height: 20px;
+    width:20px;
+   
     margin-right: 30px;
+   
+   
+}
+.product-arrowup {
+    height: 20px;
+    width:20px;
+     
 }
