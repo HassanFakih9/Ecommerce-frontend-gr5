@@ -100,13 +100,27 @@
         margin-left: 0px;
 
     }
+
     .product {
-        
+
         margin-left: 00px;
     }
+
     .productcomp-name {
         margin-left: 00px;
         text-align: center;
     }
-  
+
+    .product-laptop img {
+
+        height: 250px;
+        width: 350px;
+        margin-left: 0px;
+    }
+
+    .product-hppavillon {
+
+        height: 250px;
+        width: 350px;
+    }
 }
