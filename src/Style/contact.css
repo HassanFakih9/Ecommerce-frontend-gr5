@@ -32,7 +32,7 @@
 
 
 .contact-message p {
-    color: #656FC7;
+    color: #675FC7;
     text-align: center;
 }
 
@@ -233,9 +233,11 @@
     }
 
     .message {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        
+      
+        width: 200px;
+    height: 100px;
+        
     }
 
     .faq-part1 {
@@ -243,8 +245,8 @@
     }
 
     .faq-image img {
-        width: 375px;
-        height: 250px;
+        width: 325px;
+        height: 200px;
         margin-left: 0;
 
     }
