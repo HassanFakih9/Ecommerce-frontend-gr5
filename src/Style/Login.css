@@ -102,4 +102,8 @@
 
         margin-left: 300px;
     }
+    .login-img{
+       display: none;
+    }
+    
 }
