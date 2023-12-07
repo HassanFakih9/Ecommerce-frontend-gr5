@@ -1,0 +1,92 @@
+.orderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+.orderFlex{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orderTitle{
+    font-size: 35px;
+    color: #675FC7;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.orderDiv{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+.orderInfoCont{
+    margin-bottom: 10px;
+    width: 400px;
+    height: 20px;
+    border-radius: 15px;
+    border: 2px solid #675FC7;
+    padding: 10px;
+}
+.wid{
+    width: 185px;
+    margin-right: 8px;
+}
+.placeOrderBtn{
+    height: 35px;
+    width: 200px;
+    background-color: #675FC7;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.selectCountry{
+    width: 424px;
+    height: 40px;
+}
+
+.verticalLine{
+    border: none;
+    border-left: 1px solid #675FC7
+}
+
+.orderedProductIndo{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.orderProductImage{
+    width: 150px;
+    height: 150px;
+}
+
+.orderProductName{
+    color: #675FC7;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-right: 30px;
+}
+.bin{
+    width: 30px;
+    height: 30px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.price{
+    display: flex;
+    margin-bottom: 20px;
+    
+}
+.subText{
+    font-weight: bold;
+    color: #675FC7;
+    font-size: 20px;
+    margin-right: 150px;
+}

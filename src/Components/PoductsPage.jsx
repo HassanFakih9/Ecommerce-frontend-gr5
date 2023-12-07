@@ -8,9 +8,11 @@ const PoductsPage = () => {
       <MenuBar/>
       <div className='selectBar'>
         <select className='selectCategory' id='selectCategory'>
-
         </select>
         <input type='text' className='inputProduct' placeholder='Search Product'/>
+      </div>
+      <div className='AllProducts'>
+        
       </div>
       <Footer/>
     </div>

@@ -43,3 +43,27 @@ padding: 0;
 a{
     text-decoration: none
 }
+
+.orderDetailModal{
+ width: 20%;
+ height: fit-content;
+ border: 2px solid #656FC7;
+ padding: 20px;
+ border-radius: 10px;
+
+}
+.buttonDiv{
+    display: flex;
+    flex-direction: column;
+}
+.modalButtons{
+    width: 90%;
+    height: 30px;
+    background-color: #656FC7;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
