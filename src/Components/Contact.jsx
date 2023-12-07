@@ -15,7 +15,7 @@ const Contact = () => {
         <div className="contactus">
 
             <MenuBar />
-            <div className=" contact-container">
+            <div className="contact-container">
                 <div className="contact-callcenter">
                     <img src={callcenter} className="callcenter" />
                 </div>
@@ -25,35 +25,37 @@ const Contact = () => {
                         <p className="contact-title">Drop a Message </p>
                         <p> you have any inquiry or some feedback to us ?<br /> fill out the form below to contact our team </p>
                     </div>
-
-                    <div className="contact-info">
-                        <div className="contact-name">
-                            <input type="text" id="username" placeholder="Name" />
-                        </div>
-                        <div className="contact-lastname">
-                            <div className=" text">
-                                <input type="text" id="username" placeholder="Lastname" />
+                    <div className='contact-information'>
+                        <div className="contact-info">
+                            <div className="contact-name">
+                                <input type="text" id="username" placeholder="Name" />
+                            </div>
+                            <div className="contact-lastname">
+                                <div className=" text">
+                                    <input type="text" id="username" placeholder="Lastname" />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="contact-info">
-                        <div className="contact-name">
-                            <input type="text" id="username" placeholder="Email" />
-                        </div>
-                        <div className="contact-lastname">
-                            <div className=" text">
-                                <input type="text" id="username" placeholder="Phone" />
+                        <div className="contact-info">
+                            <div className="contact-name">
+                                <input type="text" id="username" placeholder="Email" />
+                            </div>
+                            <div className="contact-lastname">
+                                <div className=" text">
+                                    <input type="text" id="username" placeholder="Phone" />
+                                </div>
+
                             </div>
 
                         </div>
-
-                    </div>
-                    <div className="contact-message">
-                        <input type="text" id="username" placeholder="Message" className="message" />
-
-                        <button type="button" className="submit">
-                            Submit
-                        </button>
+                        <div className="contact-message">
+                            <input type="text" id="username" placeholder="Message" className="message" />
+                            <div className='contact-submitbtn'>
+                            <button type="button" className="submit">
+                                Submit
+                            </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
