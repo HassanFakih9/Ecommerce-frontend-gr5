@@ -44,9 +44,9 @@ const ProductComponent2 = () => {
                     <div className='product-quantity1'>
                         <div className='product-quantity'>
                             <img src={arrowup} onClick={handleincrement} className='product-arrowup' />
-
-                            <span className='quantity'> {quantity}  </span>
-
+                            <div className='product-span'>
+                                <span className='quantity'> {quantity}  </span>
+                            </div>
                             <img src={arrowdown} onClick={handledecrement} className='product-arrowdown' />
                         </div>
                         <button type="button" className="productbtn-add">
