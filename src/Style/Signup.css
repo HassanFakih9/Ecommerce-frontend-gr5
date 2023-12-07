@@ -31,8 +31,8 @@
     font-weight: bold;
 }
 .close-img{ 
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 @media screen and (min-width: 360px) and (max-width: 1024px) {
     .signup{
