@@ -16,14 +16,15 @@ function App() {
      {/* <Header/>
      <AboutUs/>
      <Banner/>
-     <LatestProducts/>
+     
      <CustomerReview/>
-     <Footer/> }
+     <Footer/> 
+     <LatestProducts/>
   <Login/>
      <Signup/>
      <Contact/>
      <ProductComponent2/>*/
-     <Contact/>
+     <AboutUs/>
     }
     </div>
   );
