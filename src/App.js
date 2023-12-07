@@ -23,7 +23,8 @@ function App() {
      <Signup/>
      <Contact/>
      <ProductComponent2/>*/
-     <Header/>
+     <ProductComponent2/>
+    
       }
     </div>
   );

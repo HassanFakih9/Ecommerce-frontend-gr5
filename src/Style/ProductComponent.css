@@ -8,7 +8,7 @@
     border: 2px solid #656FC7;
     margin-bottom: 20px;
 }
-
+.quantity{padding: 50px;}
 .product-information{
     display: flex;
     
@@ -42,20 +42,7 @@
     border-radius: 10px;
     font-size: 20px;
 }
-.productbtn-quantity {
-    background-color: #ffffff;
-    border: none;
-    height: 40px;
-    width: 150px;
-    color: #675fc7;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-   
-    border:2px solid #675fc7;
 
-}
 .product-arrowdown {
     height: 20px;
     width:20px;
