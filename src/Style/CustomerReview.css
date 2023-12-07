@@ -22,11 +22,13 @@
   align-items: center;
   margin-right: 2%;
 }
+
 .review-text {
   color: #675fc7;
   font-size: 22px;
   font-weight: bold;
 }
+
 .customer-info {
   display: flex;
   justify-content: center;
@@ -34,14 +36,37 @@
   color: #675fc7;
   font-size: 18px;
 }
+
 .horizontal-line {
   border-top: 5px solid 675FC7;
   width: 100%;
   margin-top: 15px;
   margin-bottom: 10px;
 }
+
 .customer-image {
   width: 100px;
   height: 100px;
   margin-right: 25px;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+  .inside-review-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .review {
+    width: 100%;
+  }
+
+  .customer-info {
+    flex-direction: column
+  }
+
+  .review-text {
+    text-align: center;
+  }
+
+
 }

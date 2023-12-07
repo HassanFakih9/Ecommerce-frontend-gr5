@@ -13,19 +13,18 @@ import ProductComponent2 from "./Components/ProductComponent2";
 function App() {
   return (
     <div className="App">
-     {/* <Header/>
-     <AboutUs/>
-     <Banner/>
-     
-     <CustomerReview/>
+      {/* <Header/>
+          <Banner/>
+          <CustomerReview/>
      <Footer/> 
+     <AboutUs/>
      <LatestProducts/>
   <Login/>
      <Signup/>
      <Contact/>
      <ProductComponent2/>*/
-     <AboutUs/>
-    }
+<CustomerReview/>
+      }
     </div>
   );
 }
