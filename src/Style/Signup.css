@@ -11,8 +11,9 @@
     color: white;
     width: 50%;
 
-  
+
 }
+
 .signup-div {
     background-color: #675fc7;
     display: flex;
@@ -29,12 +30,12 @@
     margin-top: 50px;
 
 
-  
+
 }
 
 .signup-div p {
     font-size: larger;
-    
+
 }
 
 .signup-image {
@@ -78,15 +79,16 @@
     align-items: center;
     justify-content: center;
     align-items: center;
-   color: #675fc7;
+    color: #675fc7;
 
 }
+
 .signup-div2 {
     text-align: center;
     align-items: center;
     justify-content: center;
     width: 50%;
-   
+
 }
 
 @media screen and (min-width: 360px) and (max-width: 1024px) {
@@ -95,24 +97,36 @@
         flex-direction: column;
     }
 
-    .signup-div {
-        align-items: center;
-        width: 100%;
-    }
+    
 
-    .signup-image {
-        height: 200px;
-        width: 200px;
-        margin-top: 20px;
-
-
-    }
-
+    
     .signup-image {
         display: none;
     }
-    .part {
+
+    
+    .signup-div2 {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .signup-div {
+        align-items: flex-start;
        
         width: 100%;
+
+
     }
+
+    .signup-div1 {
+        margin-bottom: 20px;
+        margin-top: 00px;
+    
+    
+    
+    }
+    
 }
