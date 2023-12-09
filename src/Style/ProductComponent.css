@@ -3,7 +3,7 @@
 }
 
 .image-product{
-    height: 300px;
+    height: 200px;
     width: 300px;
     border: 2px solid #656FC7;
     margin-bottom: 20px;
@@ -11,9 +11,9 @@
 .quantity{padding: 50px;}
 .product-information{
     display: flex;
-    
     width: 300px;
     border: 2px solid #656FC7;
+    margin-bottom: 20px;
 }
 .product-name{
     width: 75%;

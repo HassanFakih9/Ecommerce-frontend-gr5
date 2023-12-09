@@ -13,6 +13,10 @@
     width: 200px;
     height: 30px;
     border-radius: 20px ;
+    padding-left: 10px;
+    color: #675FC7;
+    font-size: 15px;
+    font-family: Itim;
 }
 .inputProduct{
     width: 150px;
@@ -26,4 +30,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
