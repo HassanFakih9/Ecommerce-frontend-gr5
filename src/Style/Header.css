@@ -63,7 +63,9 @@
 
         flex-direction: column;
     }
-
+    .header-container {
+        margin-bottom: 20px;
+    }
     .inside-header-container {
         width: 100%;
         padding: 0px;
@@ -72,6 +74,7 @@
 
     .shopBtn {
    align-self: center;
+   margin-bottom: 15px;
     }
     
     .gif {
