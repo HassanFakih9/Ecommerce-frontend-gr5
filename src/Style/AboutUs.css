@@ -1,0 +1,92 @@
+.AboutUs {
+  margin-top: 30px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #656fc7;
+  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.aboutFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.aboutUs-Container {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.about-text {
+  width: 30%;
+  color: #656fc7;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.about-content {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutGif {
+  width: 150px;
+  height: 150px;
+}
+
+.about-subTitle {
+  font-size: 22px;
+  color: #656fc7;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-description {
+  color: #656fc7;
+  width: 75%;
+  text-align: center;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+  .aboutUs-Container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-description {
+    width: 100%;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+  .aboutFlex {
+    
+    margin-bottom: 10px;}
+    .titleContainer {
+      
+      margin-bottom: 10px;
+    }
+}

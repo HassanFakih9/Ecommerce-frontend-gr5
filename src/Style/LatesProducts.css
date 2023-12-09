@@ -1,0 +1,25 @@
+.latestProducts {
+    margin-bottom: 75px;
+}
+
+.product-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+    .product-display {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titleContainer {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
