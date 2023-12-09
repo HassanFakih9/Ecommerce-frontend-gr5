@@ -3,6 +3,7 @@ import login from "../images/login.png";
 import user from "../images/user.svg";
 import password from "../images/password.svg";
 import close from "../images/close.svg";
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="login">
@@ -18,7 +19,9 @@ const Login = () => {
       <div className="part1">
         <div className="part2">
           <div className="close">
-            <img src={close} className="login-img" />
+         
+            <Link to="/"><img src={close} className="close-img" /></Link>
+                
           </div>
           <p className="login-title">
             USER LOGIN 
@@ -28,7 +31,7 @@ const Login = () => {
               <img src={user} className="login-img" />
             
             <div className=" text">
-              <input type="text" id="username" placeholder="username" className="login-input" />
+              <input type="text" id="username" placeholder="Username" className="login-input" />
             </div>
           </div>
           <div className="user1">
@@ -36,12 +39,12 @@ const Login = () => {
               <img src={password} className="login-img"/>
           
             <div className="text"></div>
-            <input type="password" id="username" placeholder="password" className="login-input"/>
+            <input type="password" id="username" placeholder="Password" className="login-input"/>
           </div>
           <button type="button" className="loginbt">
             Log In
           </button>
-          <p> Not on E-lectronics ? Sign Up</p>
+          <p> Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link></p>
         </div>
       </div>
     </div>

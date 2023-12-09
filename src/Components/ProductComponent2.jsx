@@ -41,13 +41,19 @@ const ProductComponent2 = () => {
                         Webcam <br /> Bluetooth<br />      Wifi 802.11 <br />     Windows 10 </p>
                     <p className='product-model'> Model:14-dq0052dx   SKU:6499749</p>
                     <p className='product-price'>$299.3</p>
-                    <img src={arrowup} onClick={handleincrement} className='product-arrowup' />
-                    <button type="button" className="productbtn-quantity"> {quantity}  </button>
+                    <div className='product-quantity1'>
+                        <div className='product-quantity'>
+                            <img src={arrowup} onClick={handleincrement} className='product-arrowup' />
+                            <div className='product-span'>
+                                <span className='quantity'> {quantity}  </span>
+                            </div>
+                            <img src={arrowdown} onClick={handledecrement} className='product-arrowdown' />
+                        </div>
+                        <button type="button" className="productbtn-add">
+                            Add to Chart
+                        </button>
+                    </div>
 
-                    <img src={arrowdown} onClick={handledecrement} className='product-arrowdown' />
-                    <button type="button" className="productbtn-add">
-                        Add to Chart
-                    </button>
                 </div>
             </div>
             <div className='product-similar'>

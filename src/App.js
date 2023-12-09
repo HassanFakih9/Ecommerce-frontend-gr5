@@ -1,30 +1,23 @@
-import AboutUs from "./Components/AboutUs";
-import Header from "./Components/Header";
-import Banner from "./Components/Banner";
-import CustomerReview from "./Components/CustomerReview";
-import Footer from "./Components/Footer";
-import LatestProducts from "./Components/LatestProducts";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./HomePage";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import Contact from "./Components/Contact";
-import ProductComponent from "./Components/ProductComponent";
-import ProductComponent2 from "./Components/ProductComponent2";
-
+import PoductsPage from "./Components/PoductsPage"
+import OrderPage from "./Components/OrderPage";
 function App() {
   return (
     <div className="App">
-     {/* <Header/>
-     <AboutUs/>
-     <Banner/>
-     <LatestProducts/>
-     <CustomerReview/>
-     <Footer/> }
-  <Login/>
-     <Signup/>
-     <Contact/>
-     <ProductComponent2/>*/
-     <ProductComponent2/>
-    }
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/ProductsPage" element={<PoductsPage />} />
+          <Route path="/OrderPage" element={<OrderPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

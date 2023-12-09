@@ -8,6 +8,7 @@ import confpassword from '../images/confirm-password-com.svg'
 import email from '../images/email.svg'
 import phone from '../images/phone.svg'
 import address from '../images/location.svg'
+import { Link } from "react-router-dom";
 const Signup = () => {
     return (
 
@@ -26,7 +27,7 @@ const Signup = () => {
             <div className="part1">
                 <div className="part2">
                     <div className="close">
-                        <img src={close} className="close-img" />
+                        <Link to="/"><img src={close} className="close-img" /></Link>
                     </div>
                     <p className="signup-title">
                         Sign Up
@@ -92,7 +93,7 @@ const Signup = () => {
                     <button type="button" className="loginbt">
                         Create Account
                     </button>
-                    <p> Already have an account? Sign in</p>
+                    <p> Already have an account? <Link to="/Login">Sign in </Link></p>
 
                 </div>
 
