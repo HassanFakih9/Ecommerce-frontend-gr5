@@ -22,3 +22,8 @@
     margin-right: 5%;
     padding: 10px;
 }
+.allProducts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
