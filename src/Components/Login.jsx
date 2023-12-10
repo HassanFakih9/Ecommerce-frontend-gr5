@@ -2,6 +2,7 @@ import "../Style/Login.css";
 import login from "../images/login.png";
 import user from "../images/user.svg";
 import password from "../images/password.svg";
+import email from "../images/email.svg";
 import back from "../images/back.svg";
 import { Link } from "react-router-dom";
 const Login = () => {
@@ -32,23 +33,25 @@ const Login = () => {
             </p>
             <div className="user1">
 
-              <img src={user} className="login-img" />
+                            <img src={email} className="login-img" />
 
-              <div className=" text">
-                <input type="text" id="username" placeholder="Username" className="login-input" />
-              </div>
-            </div>
+                            <div className=" text">
+                                <input type="text" id="username" placeholder="Email" className="login-input" />
+                            </div>
+                        </div>
             <div className="user1">
 
               <img src={password} className="login-img" />
 
-              <div className="text"></div>
-              <input type="password" id="username" placeholder="Password" className="login-input" />
+              <div className="text">
+                <input type="password" id="username" placeholder="Password" className="login-input" />
+              </div>
             </div>
+
             <button type="button" className="loginbt">
               Log In
             </button>
-            <p> Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link></p>
+            <p className="loginp"> Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link></p>
           </div>
         </div>
       </div>

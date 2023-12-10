@@ -8,7 +8,7 @@ import confpassword from '../images/confirm-password-com.svg'
 import email from '../images/email.svg'
 import phone from '../images/phone.svg'
 import address from '../images/location.svg'
-import { Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 const Signup = () => {
     return (
 
@@ -41,7 +41,7 @@ const Signup = () => {
                             <img src={user} className="login-img" />
 
                             <div className=" text">
-                                <input type="text" id="username" placeholder="username" className="login-input" />
+                                <input type="text" id="username" placeholder="First Name" className="login-input" />
                             </div>
                         </div>
                         <div className="user1">
@@ -49,32 +49,7 @@ const Signup = () => {
                             <img src={lastname} className="login-img" />
 
                             <div className=" text">
-                                <input type="text" id="username" placeholder="Lastname" className="login-input" />
-                            </div>
-                        </div>
-                        <div className="user1">
-
-                            <img src={email} className="login-img" />
-
-                            <div className=" text">
-                                <input type="text" id="username" placeholder="Email" className="login-input" />
-                            </div>
-                        </div>
-                        <div className="user1">
-
-                            <img src={password} className="login-img" />
-
-                            <div className=" text">
-                                <input type="text" id="username" placeholder="Password" className="login-input" />
-                            </div>
-                        </div>
-
-                        <div className="user1">
-
-                            <img src={confpassword} className="login-img" />
-
-                            <div className=" text">
-                                <input type="text" id="username" placeholder="Confirm Password" className="login-input" />
+                                <input type="text" id="username" placeholder="Last Name" className="login-input" />
                             </div>
                         </div>
                         <div className="user1">
@@ -87,12 +62,24 @@ const Signup = () => {
                         </div>
                         <div className="user1">
 
-                            <img src={address} className="login-img" />
+                            <img src={email} className="login-img" />
 
                             <div className=" text">
-                                <input type="text" id="username" placeholder="Adderss" className="login-input" />
+                                <input type="email" id="email" placeholder="Email" className="login-input" />
                             </div>
                         </div>
+                        
+                        <div className="user1">
+
+                            <img src={password} className="login-img" />
+
+                            <div className=" text">
+                                <input type="text" id="username" placeholder="Password" className="login-input" />
+                            </div>
+                        </div>
+
+                                              
+                        
                         <div className='btn-signup'>
                             <button type="button" className="submitbt">
                                 Create Account

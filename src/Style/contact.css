@@ -17,6 +17,7 @@
 .contact-callcenter img {
     height: 450px;
     width: 700px;
+    border-radius: 20%;
 
 }
 
@@ -28,8 +29,6 @@
     font-size: 40px;
     font-weight: bold;
 }
-
-
 
 .contact-message p {
     color: #675FC7;
@@ -107,7 +106,6 @@
     margin-left: 20px;
     margin-bottom: 50px;
 
-
 }
 
 
@@ -119,10 +117,15 @@
 }
 
 .contact-callcenter2 {
-    margin-left: 500px;
+    margin-left: 350px;
     color: #675fc7;
     align-items: center;
     text-align: center;
+}
+
+.contact-callcenter2 img {
+    border-radius: 20%;
+
 }
 
 .contact-email1 {
@@ -139,6 +142,7 @@
     width: 40px;
     margin-left: 10px;
     margin-bottom: 10px;
+
 }
 
 .contact-faq {
@@ -150,6 +154,7 @@
     width: 600px;
     height: 400px;
     margin-left: 20px;
+    border-radius: 10%;
 
 }
 
@@ -158,14 +163,18 @@
     flex-direction: row;
 }
 
+.faq-QA {
+    margin-top: 100px;
+}
+
 .faq-question {
-    height: 20px;
+    height: 30px;
     background-color: #675fc7;
     color: white;
     padding: 10px;
     margin-bottom: 10px;
     width: 400px;
-    text-align: center;
+    
     margin-left: 150px;
     border-radius: 20px;
 }
@@ -183,6 +192,43 @@
     margin-left: 150px;
     border-radius: 20px;
     margin-bottom: 10px;
+}
+
+.faq-answer {
+    display: none;
+}
+
+.contact-back {
+    margin-top: 20px;
+    background-color: #656FC7;
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-back2 {
+    height: 70vh;
+    margin-top: 20px;
+    background-color: #F8F8F8;
+    width: 97%;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.question img {
+    height: 40px;
+    width: 40px;
+
+}
+
+.arrowdown2 {
+    height: 25px;
+    width: 25px;
+    margin-left: 150px;
+  
 }
 
 @media screen and (min-width: 360px) and (max-width: 1024px) {
@@ -233,11 +279,11 @@
     }
 
     .message {
-        
-      
+
+
         width: 200px;
-    height: 100px;
-        
+        height: 100px;
+
     }
 
     .faq-part1 {
@@ -248,7 +294,6 @@
         width: 325px;
         height: 200px;
         margin-left: 0;
-
     }
 
     .faq-question {
@@ -260,7 +305,6 @@
     .faq-answer {
         margin-left: 0;
         width: 300px;
-
     }
 
     .faq-part1 {
@@ -270,11 +314,27 @@
     }
 
     .contact h1 {
-
         margin-left: 0px;
+    }
 
-
+    .contact-back {
+        margin-top: 20px;
+        background-color: white;
+        height: 100vh;
+        width: 100%;
 
     }
 
+    .contact-back2 {
+        height: 100vh;
+        margin-top: 0px;
+        background-color: #F8F8F8;
+        width: 100%;
+        margin-left: 0px;
+
+    }
+
+    .faq-QA {
+        margin-top: 0px;
+    }
 }
