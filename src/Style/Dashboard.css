@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+.vendorLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #675FC7;
+    height: 100vh;
+}
+
+.vendorLoginContainer{
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius:15px ;
+}
+.logintitle{
+    font-size: 30px;
+    color: #675FC7;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.vendorlogin-input{
+    width: 300px;
+    height: 35px;
+    margin-bottom: 15px;
+    border: 2px solid #675FC7;
+    border-radius: 15px;
+    padding: 10px;
+}
+.userLogin-btn{
+    width: 150px;
+    height: 35px;
+    background-color: #675FC7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.dashboard-container{
+  height: 100vh;
+  display: flex;
+ 
+}
+
+.side-menu{
+background:#675FC7 ;
+width: 15%;
+height: 100%;
+text-align: center;
+padding: 10px;
+}
+.dash-title{
+font-size: 30px;
+color: white;
+margin-bottom: 25px;
+}
+.dash-menu-li{
+font-size: 20px;
+color: white;
+margin-bottom: 20px;
+cursor: pointer;
+}
+.dash-menu-li:hover{
+color: black;
+}
+.dashboard-content{
+  width: 85%;
+  padding: 15px;
+}
+.content-title{
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.dashb-container{
+    padding: 20px;
+}
+
+.add-title{
+    font-size: 35px;
+    color: #675FC7;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-input{
+    width: 250px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #675FC7;
+    margin: 10px 0;
+}

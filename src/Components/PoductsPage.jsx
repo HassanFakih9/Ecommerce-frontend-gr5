@@ -20,6 +20,7 @@ const ProductsPage = () => {
 
       const response = await axios.get(url);
       const modifiedProducts = response.data.map((product) => ({
+        id:product._id,
         name: product.name,
         image: product.image,
         price: product.price,
@@ -37,11 +38,13 @@ const ProductsPage = () => {
   };
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:8000/category/getAllCategories');
+      const response = await fetch(
+        "http://localhost:8000/category/getAllCategories"
+      );
       const data = await response.json();
       setCategories(data); // Assuming the response returns an array of category objects
     } catch (error) {
-      console.error('Error fetching categories:', error);
+      console.error("Error fetching categories:", error);
     }
   };
 
@@ -55,13 +58,12 @@ const ProductsPage = () => {
     fetchProducts();
     fetchCategories();
   }, []);
-  
 
   return (
     <div className="ProductsPage">
       <MenuBar />
       <div className="selectBar">
-      <select
+        <select
           className="selectCategory"
           id="selectCategory"
           onChange={handleCategoryChange}
@@ -87,18 +89,18 @@ const ProductsPage = () => {
         ) : (
           products.map((product, index) => (
             <ProductComponent
-              key={index}
-              name={product.name}
-              price={product.price}
-              image={product.image}
-            />
+            key={product.id} 
+            id={product.id} 
+            name={product.name}
+            price={product.price}
+            image={product.image}
+          />
           ))
         )}
       </div>
       <Footer />
 
-      <div className='product-modal'>
-        </div>
+      <div className="product-modal"></div>
     </div>
   );
 };

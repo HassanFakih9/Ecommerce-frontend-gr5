@@ -49,7 +49,11 @@
 
 .product-model {
     color: #675FC7;
+    display: flex;
 
+}
+.product-bold{
+    font-weight: bold;
 }
 
 .product-laptop {
@@ -121,7 +125,12 @@
     color: black;
     font-weight: bold;
 }
-
+.product-quantity1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (min-width: 360px) and (max-width: 1024px) {
 

@@ -32,7 +32,7 @@ const ProductComponent2 = () => {
         <ProductDetails
           image={product.image}
           name={product.name}
-          vendor={product.vendor}
+          vendor={product.vendorName}
           description={product.description}
           price={product.price}
         />
