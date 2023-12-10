@@ -1,3 +1,4 @@
+/* ----------- Vendor INfo--------------------------------- */
 .vendor-user {
     display: flex;
     flex-direction: row;
@@ -7,13 +8,14 @@
     margin-top: 20px;
 }
 
-.vendortitle{ 
+.vendortitle {
     text-align: center;
     font-size: 35px;
     color: #675FC7;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 .vendor-image {
     height: 300px;
     width: 400px;
@@ -23,8 +25,8 @@
     justify-content: center;
 }
 
-.btn-delete{ 
-    background-color:red;
+.btn-delete {
+    background-color: red;
     border: none;
     height: 40px;
     width: 170px;
@@ -33,10 +35,32 @@
     margin-bottom: 20px;
     border-radius: 10px;
     font-size: 20px;
-margin-left: 50px;
+    margin-left: 50px;
 }
 
-.button-containor
-{align-items: center;
+.button-containor {
+    align-items: center;
     justify-content: center;
-text-align: center;}
+    text-align: center;
+}
+/* 
+---------------------------------------------------------- */
+/* -------------------Vendor Table------------------------------ */
+.table, th, td {
+    border:  solid;
+    color: #675FC7;
+    font-size: 24px;
+ }
+.order-title{
+    text-align: center;
+    font-size: 35px;
+    color: #675FC7;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.samer{ 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
