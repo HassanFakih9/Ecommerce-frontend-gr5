@@ -19,7 +19,7 @@ const ProductDetails = ({image ,name ,vendor , description, price}) => {
         }
     }
     return (
-        <div>
+    
               <div className='productcomp-title'>
                 <div className='product'>
                     <h1 className='productcomp-name'> {name}</h1>
@@ -27,7 +27,7 @@ const ProductDetails = ({image ,name ,vendor , description, price}) => {
                 </div>
                 <div className='productdetail'>
                     <h1 className='productcomp-name'> Products Details</h1>
-                    <p>  By : {vendor} </p>
+                    <p className='product-model'>  By : {vendor} </p>
                     <p className='product-model'> {description}</p>
                     <p className='product-price'> {price} $</p>
                     <div className='product-quantity1'>
@@ -45,8 +45,6 @@ const ProductDetails = ({image ,name ,vendor , description, price}) => {
 
                 </div>
             </div>
-
-        </div>
         )
     }
     

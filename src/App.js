@@ -7,6 +7,8 @@ import PoductsPage from "./Components/PoductsPage"
 import OrderPage from "./Components/OrderPage";
 import ProductComponent2 from "./Components/ProductComponent2";
 import ProductDetails from "./Components/ProductsDetails";
+import VendorLogin from "./Components/VendorDashboard/VendorLogin";
+import AdminLogin from "./Components/VendorDashboard/AdminLogin";
 function App() {
   return (
     <div className="App">
@@ -21,6 +23,8 @@ function App() {
           <Route path="/ProductComponent2" element={<ProductComponent2 />} />
           <Route path="/ProductDetails" element={<ProductDetails />} />
           <Route path="/ProductComponent2/:id" element={<ProductComponent2 />} />
+          <Route path="/Vendor" element={<VendorLogin />} />
+          <Route path="/admin" element={<AdminLogin />} />
         </Routes>
       </Router>
     </div>

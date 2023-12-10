@@ -1,0 +1,43 @@
+.vendorLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #675FC7;
+    height: 100vh;
+}
+
+.vendorLoginContainer{
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius:15px ;
+}
+.logintitle{
+    font-size: 30px;
+    color: #675FC7;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.vendorlogin-input{
+    width: 300px;
+    height: 35px;
+    margin-bottom: 15px;
+    border: 2px solid #675FC7;
+    border-radius: 15px;
+    padding: 10px;
+}
+.userLogin-btn{
+    width: 150px;
+    height: 35px;
+    background-color: #675FC7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
