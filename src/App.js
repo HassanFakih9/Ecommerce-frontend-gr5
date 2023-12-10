@@ -9,6 +9,7 @@ import ProductComponent2 from "./Components/ProductComponent2";
 import ProductDetails from "./Components/ProductsDetails";
 import VendorLogin from "./Components/VendorDashboard/VendorLogin";
 import AdminLogin from "./Components/VendorDashboard/AdminLogin";
+import VendorDashboard from "./Components/VendorDashboard/VendorDashboard";
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
           <Route path="/ProductComponent2/:id" element={<ProductComponent2 />} />
           <Route path="/Vendor" element={<VendorLogin />} />
           <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/vendorDash" element={<VendorDashboard />} />
         </Routes>
       </Router>
     </div>

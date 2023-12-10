@@ -1,4 +1,4 @@
-import '../../Style/Vendor.css';
+import '../../Style/Dashboard.css';
 
 const VendorLogin = () => {
   return (
