@@ -8,7 +8,7 @@ import confpassword from '../images/confirm-password-com.svg'
 import email from '../images/email.svg'
 import phone from '../images/phone.svg'
 import address from '../images/location.svg'
-import { Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 const Signup = () => {
     return (
 
@@ -85,14 +85,7 @@ const Signup = () => {
                                 <input type="text" id="username" placeholder="Phone" className="login-input" />
                             </div>
                         </div>
-                        <div className="user1">
-
-                            <img src={address} className="login-img" />
-
-                            <div className=" text">
-                                <input type="text" id="username" placeholder="Adderss" className="login-input" />
-                            </div>
-                        </div>
+                        
                         <div className='btn-signup'>
                             <button type="button" className="submitbt">
                                 Create Account

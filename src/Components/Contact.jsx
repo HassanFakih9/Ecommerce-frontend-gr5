@@ -1,4 +1,5 @@
 import '../Style/contact.css';
+
 import MenuBar from './MenuBar';
 import Footer from './Footer';
 import callcenter from '../images/callcenter.jpg'
@@ -8,58 +9,69 @@ import location from '../images/location.svg'
 import facebook from '../images/facebook.svg'
 import intagram from '../images/instagram.svg'
 import twitter from '../images/twitter.svg'
+import whatsapp from '../images/whatsapp.svg'
 import callcenter2 from '../images/callcenter2.png'
 import faq from '../images/Faq2.png'
+import arrowdown1 from '../images/arrow-down2.svg'
+import {useEffect, useState } from 'react';
+
+
 const Contact = () => {
+    
+    
     return (
         <div className="contactus">
+            <div className="contactus1">
 
-            <MenuBar />
-            <div className="contact-container">
-                <div className="contact-callcenter">
-                    <img src={callcenter} className="callcenter" />
-                </div>
 
-                <div className="contact-message">
-                    <div >
-                        <p className="contact-title">Drop a Message </p>
-                        <p> you have any inquiry or some feedback to us ?<br /> fill out the form below to contact our team </p>
+                <MenuBar />
+                <div className="contact-container">
+                    <div className="contact-callcenter">
+                        <img src={callcenter} className="callcenter" />
                     </div>
-                    <div className='contact-information'>
-                        <div className="contact-info">
-                            <div className="contact-name">
-                                <input type="text" id="username" placeholder="Name" />
+
+                    <div className="contact-message">
+                        <div >
+                            <p className="contact-title">Drop a Message </p>
+                            <p> you have any inquiry or some feedback to us ?<br /> fill out the form below to contact our team </p>
+                        </div>
+                        <div className='contact-information'>
+                            <div className="contact-info">
+                                <div className="contact-name">
+                                    <input type="text" id="username" placeholder="Name" />
+                                </div>
+                                <div className="contact-lastname">
+                                    <div className=" text">
+                                        <input type="text" id="username" placeholder="Lastname" />
+                                    </div>
+                                </div>
                             </div>
-                            <div className="contact-lastname">
-                                <div className=" text">
-                                    <input type="text" id="username" placeholder="Lastname" />
+                            <div className="contact-info">
+                                <div className="contact-name">
+                                    <input type="text" id="username" placeholder="Email" />
+                                </div>
+                                <div className="contact-lastname">
+                                    <div className=" text">
+                                        <input type="text" id="username" placeholder="Phone" />
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className="contact-message">
+                                <input type="text" id="username" placeholder="Message" className="message" />
+                                <div className='contact-submitbtn'>
+                                    <button type="button" className="submit">
+                                        Submit
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div className="contact-info">
-                            <div className="contact-name">
-                                <input type="text" id="username" placeholder="Email" />
-                            </div>
-                            <div className="contact-lastname">
-                                <div className=" text">
-                                    <input type="text" id="username" placeholder="Phone" />
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div className="contact-message">
-                            <input type="text" id="username" placeholder="Message" className="message" />
-                            <div className='contact-submitbtn'>
-                            <button type="button" className="submit">
-                                Submit
-                            </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
-
             </div>
+            <div className='contact-back'>
+            <div className='contact-back2'>
             <div className="contact-socialmedia">
                 <div class="contact">
                     <h1 > Contact Information </h1>
@@ -69,6 +81,10 @@ const Contact = () => {
                     </div>
                     <div className="contact-email">
                         <img src={phone} />
+                        <p> 961 1690448 </p>
+                    </div>
+                    <div className="contact-email">
+                        <img src={whatsapp} />
                         <p> 961 70307183 </p>
                     </div>
                     <div className="contact-email">
@@ -85,7 +101,8 @@ const Contact = () => {
                         <img src={facebook} />
                         <img src={intagram} />
                         <img src={twitter} />
-
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,7 +114,12 @@ const Contact = () => {
                     </div>
                     <div className='faq-QA'>
                         <div className='faq-question'>
-                            <p> What payment do you accept ?</p>
+                            <div className='question' > 
+                            
+                            <p className='q1' > What payment do you accept ? </p>
+                            <img src={arrowdown1} />
+                            
+                            </div>
                         </div>
                         <div className='faq-answer'>
                             <p> Cash on delivery</p>
@@ -112,6 +134,7 @@ const Contact = () => {
                         </div>
                         <div className='faq-question'>
                             <p> Where are you located?</p>
+                            
                         </div>
                         <div className='faq-answer'>
                             <p>All Across the middle east </p>

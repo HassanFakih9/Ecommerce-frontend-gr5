@@ -42,13 +42,15 @@ const Login = () => {
 
               <img src={password} className="login-img" />
 
-              <div className="text"></div>
-              <input type="password" id="username" placeholder="Password" className="login-input" />
+              <div className="text">
+                <input type="password" id="username" placeholder="Password" className="login-input" />
+              </div>
             </div>
+
             <button type="button" className="loginbt">
               Log In
             </button>
-            <p> Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link></p>
+            <p className="loginp"> Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link></p>
           </div>
         </div>
       </div>
