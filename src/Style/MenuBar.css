@@ -14,8 +14,8 @@ padding: 0;
     cursor: pointer;
 }
 .logoImage{
-    width:60px;
-    height: 50px;
+    width:40px;
+    height: 40px;
     cursor: pointer;
 }
 
@@ -66,4 +66,13 @@ a{
     border-radius: 15px;
     margin-bottom: 15px;
     cursor: pointer;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+.menuBar{
+    display: none;
+}
+
+
+
 }

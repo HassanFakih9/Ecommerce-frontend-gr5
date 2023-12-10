@@ -1,4 +1,4 @@
-.selectBar{
+.selectBar {
     width: 100%;
     height: 50px;
     background-color: #675FC7;
@@ -9,26 +9,40 @@
     margin-bottom: 30px;
 }
 
-.selectCategory{
+.selectCategory {
     width: 200px;
     height: 30px;
-    border-radius: 20px ;
+    border-radius: 20px;
     padding-left: 10px;
     color: #675FC7;
     font-size: 15px;
     font-family: Itim;
 }
-.inputProduct{
+
+.inputProduct {
     width: 150px;
     height: 15px;
-    border-radius: 20px ;
+    border-radius: 20px;
     border: none;
     margin-right: 5%;
     padding: 10px;
 }
-.allProducts{
+
+.allProducts {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+    .selectCategory {
+        width: 150px;
+    }
+
+    .inputProduct {
+        width: 100px;
+        
+    }
 }
