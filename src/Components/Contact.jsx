@@ -17,7 +17,29 @@ import { useEffect, useState } from 'react';
 
 
 const Contact = () => {
+    const [question1, setquestion1] = useState(false)
+    const [question2, setquestion2] = useState(false)
+    const [question3, setquestion3] = useState(false)
+    const [question4, setquestion4] = useState(false)
 
+    const showAnswer = (i) => {
+        switch (i) {
+            case 1:
+                setquestion1(!question1)
+                break
+            case 2:
+                setquestion2(!question2)
+                break
+            case 3:
+                setquestion3(!question3)
+                break
+            case 4:
+                setquestion4(!question4)
+                break
+            default: break
+        }
+
+    }
 
     return (
         <div className="contactus">
@@ -113,33 +135,41 @@ const Contact = () => {
                         <img src={faq} />
                     </div>
                     <div className='faq-QA'>
-                        <div className='faq-question'>
+                        <div className='faq-question' onClick={() => showAnswer(1)} >
                             <p> What payment do you accept ?<img src={arrowdown2} className='arrowdown2' /> </p>
                         </div>
-                        <div className='faq-answer'>
-                            <p> Cash on delivery</p>
-                        </div>
+                        {question1 &&
+                            <div className='faq-answer'>
+                                <p> Cash on delivery</p>
+                            </div>
+                        }
 
-                        <div className='faq-question'>
+                        <div className='faq-question' onClick={() => showAnswer(2)}>
                             <p> When i will receive my order?<img src={arrowdown2} className='arrowdown2' /></p>
                         </div>
-                        <div className='faq-answer'>
-                            <p> 24 to 48 hours</p>
+                        {question2 &&
+                            <div className='faq-answer'>
+                                <p> 24 to 48 hours</p>
 
-                        </div>
-                        <div className='faq-question'>
+                            </div>
+                        }
+                        <div className='faq-question' onClick={() => showAnswer(3)}>
                             <p> Where are you located?<img src={arrowdown2} className='arrowdown2' /></p>
 
                         </div>
-                        <div className='faq-answer'>
-                            <p>All Across the middle east </p>
-                        </div>
-                        <div className='faq-question'>
+                        {question3 &&
+                            <div className='faq-answer'>
+                                <p>All Across the middle east </p>
+                            </div>}
+                        <div className='faq-question' onClick={() => showAnswer(4)}>
                             <p> Do you have extra fees? <img src={arrowdown2} className='arrowdown2' /></p>
                         </div>
-                        <div className='faq-answer'>
-                            <p>No extra fees </p>
-                        </div>
+                        {question4 &&
+                            <div className='faq-answer'>
+                                <p>No extra fees </p>
+
+                            </div>
+                        }
                     </div>
                 </div >
             </div>
