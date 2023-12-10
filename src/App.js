@@ -5,6 +5,8 @@ import Signup from "./Components/Signup";
 import Contact from "./Components/Contact";
 import PoductsPage from "./Components/PoductsPage"
 import OrderPage from "./Components/OrderPage";
+import ProductComponent2 from "./Components/ProductComponent2";
+import ProductDetails from "./Components/ProductsDetails";
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,9 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/ProductsPage" element={<PoductsPage />} />
           <Route path="/OrderPage" element={<OrderPage />} />
+          <Route path="/ProductComponent2" element={<ProductComponent2 />} />
+          <Route path="/ProductDetails" element={<ProductDetails />} />
+          <Route path="/ProductComponent2/:id" element={<ProductComponent2 />} />
         </Routes>
       </Router>
     </div>

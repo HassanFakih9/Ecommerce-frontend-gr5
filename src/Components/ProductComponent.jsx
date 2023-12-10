@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import '../Style/ProductComponent.css';
 
-const ProductComponent = ({ key, name, price, image }) => {
- 
 
+const ProductComponent = ({ id, name, price, image }) => {
   return (
     <div>
-      <div className='product' key={key}>
+      <div className='product' key={id}>
         <img src={image} className='image-product' alt={name} />
         <div className='product-information'>
           <div className='product-name'>
@@ -14,7 +14,7 @@ const ProductComponent = ({ key, name, price, image }) => {
             <br />
             Price: ${price}
           </div>
-          <div className='add-to-cart'>Add To Cart</div>
+          <Link to={`/ProductComponent2/${id}`} className='add-to-cart'>View Product</Link>
         </div>
       </div>
     </div>
