@@ -40,7 +40,11 @@ width:300px}
 
 .product-model {
     color: #675FC7;
+    display: flex;
 
+}
+.product-bold{
+    font-weight: bold;
 }
 
 .product-laptop {

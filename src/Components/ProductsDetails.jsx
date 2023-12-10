@@ -27,9 +27,9 @@ const ProductDetails = ({image ,name ,vendor , description, price}) => {
                 </div>
                 <div className='productdetail'>
                     <h1 className='productcomp-name'> Products Details</h1>
-                    <p className='product-model'>  By : {vendor} </p>
-                    <p className='product-model'> {description}</p>
-                    <p className='product-price'> {price} $</p>
+                    <div className='product-model'> <p className='product-bold'> By :</p>  {vendor} </div>
+                    <p className='product-model'> <p className='product-bold'>Description:</p> {description}</p>
+                    <p className='product-price'> <p className='product-bold'>Price: </p> {price} $</p>
                     <div className='product-quantity1'>
                         <div className='product-quantity'>
                             <img src={arrowup} onClick={handleincrement} className='product-arrowup' />

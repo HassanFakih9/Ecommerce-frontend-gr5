@@ -37,11 +37,13 @@ const ProductsPage = () => {
   };
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:8000/category/getAllCategories');
+      const response = await fetch(
+        "http://localhost:8000/category/getAllCategories"
+      );
       const data = await response.json();
       setCategories(data); // Assuming the response returns an array of category objects
     } catch (error) {
-      console.error('Error fetching categories:', error);
+      console.error("Error fetching categories:", error);
     }
   };
 
@@ -55,13 +57,12 @@ const ProductsPage = () => {
     fetchProducts();
     fetchCategories();
   }, []);
-  
 
   return (
     <div className="ProductsPage">
       <MenuBar />
       <div className="selectBar">
-      <select
+        <select
           className="selectCategory"
           id="selectCategory"
           onChange={handleCategoryChange}
@@ -97,8 +98,7 @@ const ProductsPage = () => {
       </div>
       <Footer />
 
-      <div className='product-modal'>
-        </div>
+      <div className="product-modal"></div>
     </div>
   );
 };
