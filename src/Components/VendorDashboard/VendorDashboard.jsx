@@ -1,6 +1,7 @@
 import '../../Style/Dashboard.css';
 import VendorDisplayProduct from './VendorDisplayProduct';
 import VendorAddProducts from './VendorAddProducts';
+import VendorOrder from './VendorOrder';
 import { useState } from "react";
 import VendorInfo from './VendorInfo';
 const VendorDashboard = () => {
@@ -16,6 +17,9 @@ const VendorDashboard = () => {
             case "vendorInfo":
               setActiveSection("vendorInfo");
               break;
+              case "vendorOrder":
+                setActiveSection("vendorOrder");
+                break;
           default:
             setActiveSection(null);
         }
@@ -28,6 +32,7 @@ const VendorDashboard = () => {
           <li className='dash-menu-li' onClick={() => handleClick("addProduct")}>Add Product</li>
           <li className='dash-menu-li'onClick={() => handleClick("displayProduct")}>Display Products</li>
           <li className='dash-menu-li'onClick={() => handleClick("vendorInfo")}>Your Personal Information</li>
+          <li className='dash-menu-li'onClick={() => handleClick("vendorOrder")}>Your Order</li>
         </ul>
       </div>
           <hr/>
@@ -40,6 +45,9 @@ const VendorDashboard = () => {
       </div>
       <div id="vendorInfo" style={{ display: activeSection === "vendorInfo" ? "block" : "none" }}>
         <VendorInfo />
+      </div>
+      <div id="vendorOrder" style={{ display: activeSection === "vendorOrder" ? "block" : "none" }}>
+        <VendorOrder />
       </div>
     </div>
       </div>
