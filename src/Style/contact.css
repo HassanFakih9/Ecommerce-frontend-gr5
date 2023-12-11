@@ -180,6 +180,7 @@
     width: 400px;
     margin-left: 150px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .faq-answer {
