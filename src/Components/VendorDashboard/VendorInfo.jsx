@@ -5,11 +5,18 @@ import email from "../../images/email.svg";
 import phone from "../../images/phone.svg";
 import lastname from "../../images/lastname.svg";
 import company from "../../images/company.svg";
+import back from "../../images/back.svg";
+import { Link } from "react-router-dom";
 
 
 const VendorInfo = () => {
     return (
         <div className="vendor-info">
+            <div className="back">
+
+                <Link to="/"><img src={back} className="back-img" /></Link>
+
+            </div>
             <div className="vendor-info1">
                 <p className="vendortitle"> Vendor Informartion</p>
                 <div className="vendor-user">
@@ -60,12 +67,11 @@ const VendorInfo = () => {
                 </button>
 
 
-                <button type="button" className="btn-delete">
+                <button type="button" className="btn-delete1">
                     Delete Info
                 </button>
             </div>
-            <div className='btn-signup'>
-            </div>
+
         </div>
 
 

@@ -1,6 +1,9 @@
 import '../../Style/Dashboard.css';
 import { useState } from "react";
 
+import AdminVendors from './AdminVendors';
+import AdminAddVendor from './AdminAddVendor';
+
 const AdminDashboard = () => {
  
     const [activeSection, setActiveSection] = useState(null);
@@ -15,8 +18,8 @@ const AdminDashboard = () => {
             case "vendorInfo":
               setActiveSection("vendorInfo");
               break;
-              case "vendorOrder":
-                setActiveSection("vendorOrder");
+              case "addVendor":
+                setActiveSection("addVendor");
                 break;
           default:
             setActiveSection(null);
@@ -27,25 +30,21 @@ const AdminDashboard = () => {
     <div className="side-menu">
         <p className='dash-title'> Dashboard</p>
         <ul className='dash-menu-ul'>
+          <li className='dash-menu-li'onClick={() => handleClick("displayProduct")}>See Vendors On The Website</li>
           <li className='dash-menu-li' onClick={() => handleClick("addProduct")}>Add Product</li>
-          <li className='dash-menu-li'onClick={() => handleClick("displayProduct")}>Display Products</li>
-          <li className='dash-menu-li'onClick={() => handleClick("vendorInfo")}>Your Personal Information</li>
-          <li className='dash-menu-li'onClick={() => handleClick("vendorOrder")}>Your Order</li>
+          <li className='dash-menu-li'onClick={() => handleClick("addVendor")}>Add Vendor To The Website</li>
         </ul>
       </div>
           <hr/>
       <div className='dash-content'>
       <div id="displayProduct" style={{ display: activeSection === "displayProduct" ? "block" : "none" }}>
-      
+      <AdminVendors/>
       </div>
       <div id="addProduct" style={{ display: activeSection === "addProduct" ? "block" : "none" }}>
      
       </div>
-      <div id="vendorInfo" style={{ display: activeSection === "vendorInfo" ? "block" : "none" }}>
-       
-      </div>
-      <div id="vendorOrder" style={{ display: activeSection === "vendorOrder" ? "block" : "none" }}>
-       
+      <div id="addVendor" style={{ display: activeSection === "addVendor" ? "block" : "none" }}>
+      <AdminAddVendor/>
       </div>
     </div>
       </div>

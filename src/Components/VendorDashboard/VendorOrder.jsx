@@ -1,8 +1,17 @@
 import "../../Style/VendorInfo.css";
+import back from "../../images/back.svg";
+import { Link } from "react-router-dom";
 
 const VendorOrder = () => {
     return (
-        <div className="samer">
+        <div>
+        <div className="back">
+
+                <Link to="/"><img src={back} className="back-img" /></Link>
+
+            </div>
+        <div className="vendor-order">
+                 
             <div className="vendor-table">
                 <p className="order-title"> Vendor Order</p>
                 <div className="table1">
@@ -39,6 +48,7 @@ const VendorOrder = () => {
 
 
             </div>
+        </div>
         </div>
     );
 };

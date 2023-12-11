@@ -1,9 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import MenuBar from "./MenuBar";
 import Footer from "../Components/Footer";
 import "../Style/OrderPage.css";
 import OrderedProducts from "./OrderedProducts";
 const OrderPage = () => {
+  const[firstName, setFirstName]= useState("")
+  const[lastName, setLastName]= useState("")
+  const[email, setEmail]= useState("")
+  const[phoneNUmber, setPhoneNUmber]= useState("")
+  const[country, setCountry]= useState("")
+  const[cityName, setCityname]= useState("")
+  const[postalCode, setPostalCode]= useState("")
+  const[streetAddress, setStreetAddress]= useState("")
+  const[totalPrice, setTotalPrice]= useState("")
+
+  const handleAddShipping = async () => {
+    const vendorName = localStorage.getItem("vendorName"); // Retrieving vendorName from localStorage
+    const projectBody = {
+      firstName,
+      lastName,
+      email,
+      phoneNUmber,
+      country,
+      cityName,
+      postalCode,
+      streetAddress,
+      totalPrice,
+      status:"pending",
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:8000/shipping/addShipping",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(projectBody),
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        window.alert("Order placed successfully!");
+      } else {
+        throw new Error("Network response was not ok");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      window.alert("Error adding product. Please try again later.");
+    }
+  };
+
   return (
     <div className="orderPage">
       <MenuBar />
@@ -16,11 +66,13 @@ const OrderPage = () => {
                 type="text"
                 className="orderInfoCont wid"
                 placeholder="First Name"
+                onChange={(e) => setFirstName(e.target.value)}
               />
               <input
                 type="text"
                 className="orderInfoCont wid"
                 placeholder="Last Name"
+                onChange={(e) => setLastName(e.target.value)}
               />
             </div>
             <input type="text" className="orderInfoCont" placeholder="Email" />
@@ -28,9 +80,10 @@ const OrderPage = () => {
               type="text"
               className="orderInfoCont"
               placeholder="Phone Number"
+              onChange={(e) => setPhoneNUmber(e.target.value)}
             />
             <p className="orderTitle">Shipping Information </p>
-            <select className=" orderInfoCont selectCountry">
+            <select className=" orderInfoCont selectCountry" onChange={(e) => setCountry(e.target.value)}>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -320,36 +373,39 @@ const OrderPage = () => {
                 type="text"
                 className="orderInfoCont wid"
                 placeholder="City Name"
+                onChange={(e) => setCityname(e.target.value)}
               />
               <input
                 type="text"
                 className="orderInfoCont wid"
                 placeholder="Postal Code"
+                onChange={(e) => setPostalCode(e.target.value)}
               />
             </div>
             <input
               type="text"
               className="orderInfoCont"
               placeholder="Street Address"
+              onChange={(e) => setStreetAddress(e.target.value)}
             />
-            <button className="placeOrderBtn"> Place Order</button>
+            <button className="placeOrderBtn" onClick={handleAddShipping}> Place Order</button>
           </div>
           <div class="vertical-line"></div>
 
           <div className="orderDiv">
             <p className="orderTitle">Your Order Detail</p>
-            <OrderedProducts/>
+            <OrderedProducts />
             <div className="price">
-                <p className="subText"> Products Price Total</p>
-                <p className="subText"> 1000$</p>
+              <p className="subText"> Products Price Total</p>
+              <p className="subText"> 1000$</p>
             </div>
             <div className="price">
-                <p className="subText"> Shippin Fees</p>
-                <p className="subText"> 0$</p>
+              <p className="subText"> Shippin Fees</p>
+              <p className="subText"> 0$</p>
             </div>
             <div className="price">
-                <p className="subText"> Total</p>
-                <p className="subText"> 1000$</p>
+              <p className="subText"> Total</p>
+              <p className="subText"> 1000$</p>
             </div>
           </div>
         </div>
