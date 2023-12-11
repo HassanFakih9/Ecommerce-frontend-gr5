@@ -25,7 +25,7 @@
     justify-content: center;
 }
 
-.btn-delete {
+.btn-delete1 {
     background-color: red;
     border: none;
     height: 40px;
@@ -43,24 +43,41 @@
     justify-content: center;
     text-align: center;
 }
+
 /* 
 ---------------------------------------------------------- */
 /* -------------------Vendor Table------------------------------ */
-.table, th, td {
-    border:  solid;
+.table,
+th,
+td {
+    border: solid;
     color: #675FC7;
     font-size: 24px;
- }
-.order-title{
+}
+
+.order-title {
     text-align: center;
     font-size: 35px;
     color: #675FC7;
     font-weight: bold;
     margin-bottom: 20px;
 }
-.samer{ 
+
+.vendor-order {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+.button-containor {
+        display: flex;
+        flex-direction: column;
+       
+ }
+ .btn-delete1 {
+    margin-left: 0px;
+ }   
+    
 }

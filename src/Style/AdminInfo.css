@@ -1,0 +1,45 @@
+.admin-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.admintitle {
+    text-align: center;
+    font-size: 35px;
+    color: #675FC7;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.admin-image {
+    height: 300px;
+    width: 400px;
+    margin-bottom: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-delete {
+    background-color: red;
+    border: none;
+    height: 40px;
+    width: 170px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.button-containor {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,4 +1,4 @@
-import "../../Style/VendorInfo.css";
+import "../../Style/AdminInfo.css";
 
 import user from "../../images/user.svg";
 import email from "../../images/email.svg";
@@ -9,17 +9,19 @@ import back from "../../images/back.svg";
 import { Link } from "react-router-dom";
 
 
-const VendorInfo = () => {
+const AdminInfo = () => {
     return (
-        <div className="vendor-info">
+
+        <div className="admin-info">
+         
             <div className="back">
 
                 <Link to="/"><img src={back} className="back-img" /></Link>
 
             </div>
-            <div className="vendor-info1">
-                <p className="vendortitle"> Vendor Informartion</p>
-                <div className="vendor-user">
+            <div className="admin-info1">
+                <p className="admintitle">  Add Vendor </p>
+                <div className="admin-user">
 
                     <img src={user} className="login-img" />
 
@@ -63,18 +65,16 @@ const VendorInfo = () => {
             </div>
             <div className="button-containor">
                 <button type="button" className="submitbt">
-                    Update Info
+                    Add Vendor
                 </button>
 
 
-                <button type="button" className="btn-delete1">
-                    Delete Info
-                </button>
+                
             </div>
-
+            
         </div>
 
 
     );
 };
-export default VendorInfo;
+export default AdminInfo;
