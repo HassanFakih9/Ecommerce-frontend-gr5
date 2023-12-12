@@ -13,6 +13,7 @@ import VendorDashboard from "./Components/VendorDashboard/VendorDashboard";
 import AdminVendors from "./Components/AdminDashboard/AdminVendors";
 import AdminDashboard from "./Components/AdminDashboard/AdminDashboard";
 import AdminAddVendor from "./Components/AdminDashboard/AdminAddVendor";
+import AdminProduct from "./Components/AdminDashboard/AdminProduct";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/adminOrder" element={<AdminVendors />} />
           <Route path="/adminDash" element={<AdminDashboard/>}/>
           <Route path="/addvendor" element={<AdminAddVendor/>}/>
+          <Route path="/adminProduct" element={<AdminProduct/>}/>
         </Routes>
       </Router>
     </div>

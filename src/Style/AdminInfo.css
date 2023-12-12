@@ -43,14 +43,50 @@
     justify-content: center;
     text-align: center;
 }
+
 table {
     margin-top: 50px;
     border-collapse: collapse;
     width: 750px;
     height: 100px;
     text-align: center;
-  }
+}
 
-table td{
+table td {
     padding: 10px;
 }
+
+/* ---------------------------AdminProduct */
+.enter-product {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.enter-product button {
+    margin-left: 20px;
+}
+
+.Product-input {
+    width: 100px;
+    height: 20px;
+    border-radius: 25px;
+    border: 2px solid #675fc7;
+    padding: 10px;
+}
+
+.productbtn-delete {
+    background-color: red;
+    border: none;
+    height: 40px;
+    width: 175px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+th, td {
+    padding: 25px;
+  }
