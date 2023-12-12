@@ -30,7 +30,7 @@ const MenuBar = () => {
       <Link to="/">
         <div className="logo">
           <img src={logo} className="logoImage" alt="logo" />
-          <p className="logoTitle"> E-lecrtonics</p>
+          <p className="logoTitle"> E-lectronics</p>
         </div>
       </Link>
       <div className='responsive-bar'>
