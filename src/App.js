@@ -10,10 +10,10 @@ import ProductDetails from "./Components/ProductsDetails";
 import VendorLogin from "./Components/VendorDashboard/VendorLogin";
 import AdminLogin from "./Components/AdminDashboard/AdminLogin";
 import VendorDashboard from "./Components/VendorDashboard/VendorDashboard";
-import VendorInfo from "./Components/VendorDashboard/VendorInfo";
-import VendorOrder from "./Components/VendorDashboard/VendorOrder";
-import AdminInfo from "./Components/AdminDashboard/AdminInfo";
-import AdminOrder from "./Components/AdminDashboard/AdminOrder";
+import AdminVendors from "./Components/AdminDashboard/AdminVendors";
+import AdminDashboard from "./Components/AdminDashboard/AdminDashboard";
+import AdminAddVendor from "./Components/AdminDashboard/AdminAddVendor";
+
 function App() {
   return (
     <div className="App">
@@ -31,10 +31,9 @@ function App() {
           <Route path="/Vendor" element={<VendorLogin />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/vendorDash" element={<VendorDashboard />} />
-          <Route path="/vendorInfo" element={<VendorInfo />} />
-          <Route path="/vendorOrder" element={<VendorOrder />} />
-          <Route path="/adminInfo" element={<AdminInfo />} />
-          <Route path="/adminOrder" element={<AdminOrder />} />
+          <Route path="/adminOrder" element={<AdminVendors />} />
+          <Route path="/adminDash" element={<AdminDashboard/>}/>
+          <Route path="/addvendor" element={<AdminAddVendor/>}/>
         </Routes>
       </Router>
     </div>

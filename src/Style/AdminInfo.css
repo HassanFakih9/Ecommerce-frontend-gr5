@@ -43,3 +43,14 @@
     justify-content: center;
     text-align: center;
 }
+table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 750px;
+    height: 100px;
+    text-align: center;
+  }
+
+table td{
+    padding: 10px;
+}
