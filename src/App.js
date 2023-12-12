@@ -15,7 +15,7 @@ import AdminDashboard from "./Components/AdminDashboard/AdminDashboard";
 import AdminAddVendor from "./Components/AdminDashboard/AdminAddVendor";
 import AdminProduct from "./Components/AdminDashboard/AdminProduct";
 import AdminAddProducts from "./Components/AdminDashboard/AdminAddProducts";
-import AdminCategories from "./Components/AdminDashboard/AdminCategories";
+import AdminCategories from "./Components/AdminDashboard/AdminCategories.jsx";
 
 function App() {
   return (
