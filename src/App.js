@@ -15,6 +15,7 @@ import AdminDashboard from "./Components/AdminDashboard/AdminDashboard";
 import AdminAddVendor from "./Components/AdminDashboard/AdminAddVendor";
 import AdminProduct from "./Components/AdminDashboard/AdminProduct";
 import AdminAddProducts from "./Components/AdminDashboard/AdminAddProducts";
+import AdminCategories from "./Components/AdminDashboard/AdminCategories";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/addvendor" element={<AdminAddVendor/>}/>
           <Route path="/adminProduct" element={<AdminProduct/>}/>
           <Route path="/adminAddProducts" element={<AdminAddProducts/>}/>
+          <Route path="/adminCategories" element={<AdminCategories/>}/>
         </Routes>
       </Router>
     </div>

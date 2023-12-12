@@ -1,4 +1,4 @@
-import "../../Style/VendorInfo.css";
+import "../../Style/AdminInfo.css";
 import back from "../../images/back.svg";
 import { Link } from "react-router-dom";
 import image1 from "../../images/HPpavillonDV6.jpg";
