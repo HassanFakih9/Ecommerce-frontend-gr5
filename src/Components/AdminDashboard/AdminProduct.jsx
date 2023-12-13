@@ -56,7 +56,6 @@ const AdminProduct = () => {
       console.error(error);
     }
   };
-
   const deleteProduct = async (productId) => {
     try {
       const response = await axios.delete(
@@ -74,7 +73,7 @@ const AdminProduct = () => {
         "http://localhost:8000/category/getAllCategories"
       );
       const data = await response.json();
-      setCategories(data); // Assuming the response returns an array of category objects
+      setCategories(data);
     } catch (error) {
       console.error("Error fetching categories:", error);
     }
@@ -86,14 +85,13 @@ const AdminProduct = () => {
       reader.onloadend = () => {
         setselectedProduct({
           ...selectedProduct,
-          image: reader.result, // Store the base64 string of the selected image
+          image: reader.result,
         });
-        setImagePreview(reader.result); // Set the preview of the image
+        setImagePreview(reader.result);
       };
       reader.readAsDataURL(file);
     }
   };
-  
   useEffect(() => {
     fetchCategories();
     getAllProducts();
@@ -155,7 +153,6 @@ const AdminProduct = () => {
                       >
                         Update Info
                       </button>
-
                       <button
                         type="button"
                         className="productbtn-delete"
@@ -173,7 +170,7 @@ const AdminProduct = () => {
       </div>
       {showModal && selectedProduct && (
         <div className="updateModal" id="updateModal">
-            <span className="close" onClick={handleCloseModal}>
+          <span className="close" onClick={handleCloseModal}>
             &times;
           </span>
           <div className="product-input-container">
@@ -181,7 +178,7 @@ const AdminProduct = () => {
             <input
               type="text"
               className="product-input"
-              value={selectedProduct.name || ""} // Use selectedVendor instead of vendor
+              value={selectedProduct.name || ""}
               onChange={(e) =>
                 setselectedProduct({ ...selectedProduct, name: e.target.value })
               }
@@ -210,7 +207,6 @@ const AdminProduct = () => {
                 })
               }
             />
-
             <p className="product-label"> Category</p>
             <select className="selectCategory" id="selectCategory">
               <option value={selectedProduct.category || ""}>
@@ -222,7 +218,6 @@ const AdminProduct = () => {
                 </option>
               ))}
             </select>
-        
             <p className="product-label"> Upload Image</p>
             <input
               type="file"
@@ -252,7 +247,10 @@ const AdminProduct = () => {
               }
             />
           </div>
-          <button className="vendor-add-btn" onClick={handleUpdateSubmit}> Update Product</button>
+          <button className="vendor-add-btn" onClick={handleUpdateSubmit}>
+            {" "}
+            Update Product
+          </button>
         </div>
       )}
     </div>

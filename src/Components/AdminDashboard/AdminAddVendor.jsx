@@ -17,7 +17,7 @@ const AdminInfo = () => {
     const[company, setCompany]=useState("")
     const[password, setPassword]=useState("test");
     const addVendor = async () => {
-        const vendorName = localStorage.getItem("vendorName"); // Retrieving vendorName from localStorage
+        const vendorName = localStorage.getItem("vendorName");
         const projectBody = {
             name,
             lastName,
