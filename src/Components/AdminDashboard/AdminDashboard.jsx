@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import AdminVendors from './AdminVendors';
 import AdminAddVendor from './AdminAddVendor';
+import AdminProduct from './AdminProduct';
 
 const AdminDashboard = () => {
  
@@ -15,8 +16,8 @@ const AdminDashboard = () => {
           case "displayProduct":
             setActiveSection("displayProduct");
             break;
-            case "vendorInfo":
-              setActiveSection("vendorInfo");
+            case "adminProduct":
+              setActiveSection("adminProduct");
               break;
               case "addVendor":
                 setActiveSection("addVendor");
@@ -32,6 +33,7 @@ const AdminDashboard = () => {
         <ul className='dash-menu-ul'>
           <li className='dash-menu-li'onClick={() => handleClick("displayProduct")}>See Vendors On The Website</li>
           <li className='dash-menu-li' onClick={() => handleClick("addProduct")}>Add Product</li>
+          <li className='dash-menu-li' onClick={() => handleClick("adminProduct")}>Products On Website</li>
           <li className='dash-menu-li'onClick={() => handleClick("addVendor")}>Add Vendor To The Website</li>
         </ul>
       </div>
@@ -40,8 +42,8 @@ const AdminDashboard = () => {
       <div id="displayProduct" style={{ display: activeSection === "displayProduct" ? "block" : "none" }}>
       <AdminVendors/>
       </div>
-      <div id="addProduct" style={{ display: activeSection === "addProduct" ? "block" : "none" }}>
-     
+      <div id="adminProduct" style={{ display: activeSection === "adminProduct" ? "block" : "none" }}>
+     <AdminProduct/>
       </div>
       <div id="addVendor" style={{ display: activeSection === "addVendor" ? "block" : "none" }}>
       <AdminAddVendor/>
