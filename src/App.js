@@ -16,6 +16,7 @@ import AdminAddVendor from "./Components/AdminDashboard/AdminAddVendor";
 import AdminProduct from "./Components/AdminDashboard/AdminProduct";
 import AdminAddProducts from "./Components/AdminDashboard/AdminAddProducts";
 import AdminCategories from "./Components/AdminDashboard/AdminCategories.jsx";
+import VendorOrder from "./Components/VendorDashboard/VendorOrder.jsx";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/Vendor" element={<VendorLogin />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/vendorDash" element={<VendorDashboard />} />
+          <Route path="/vendorOrder" element={<VendorOrder />} />
           <Route path="/adminOrder" element={<AdminVendors />} />
           <Route path="/adminDash" element={<AdminDashboard/>}/>
           <Route path="/addvendor" element={<AdminAddVendor/>}/>

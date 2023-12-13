@@ -27,7 +27,7 @@ const AdminProduct = () => {
                             <th>Name</th>
                             <th>Description</th>
                             <th>Price</th>
-                            <th>Categorie</th>
+                            <th>Category</th>
                             <th>Vendor Name</th>
                             <th>Image</th>
                             <th> Action </th>
