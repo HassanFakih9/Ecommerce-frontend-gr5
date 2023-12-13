@@ -12,36 +12,36 @@ const AdminCategories = () => {
             </div>
             <div className="product">
                 <p className='order-title'>
-                    Categories 
+                    Categories
                 </p>
                 <div className="enter-product">
                     <input type='text' className='vendorlogin-input' placeholder=' Add Gategory' />
                     <button className='userLogin-btn'> Add Category </button>
                 </div>
-            
-            <div className="table1">
+
+                <div className="table1">
                     <table>
                         <tr>
                             <th>Category</th>
                             <th>Update</th>
                             <th>Delete</th>
-                            
+
                         </tr>
                         <tr>
 
                             <td> </td>
                             <td> <button type="button" className="submitbt">
-                    Update 
-                </button></td>
+                                Update
+                            </button></td>
                             <td> <button type="button" className="productbtn-delete">
-                    Delete
-                </button> </td>
-                            
-                           
-                            </tr>
-                            </table>
-                            </div>
-                            </div>
+                                Delete
+                            </button> </td>
+
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>);
 };
 
