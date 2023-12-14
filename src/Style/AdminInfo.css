@@ -42,6 +42,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 20px;
 }
 
 table {
@@ -90,3 +91,9 @@ table td {
 th, td {
     padding: 25px;
   }
+.samer{  margin-left: 300px;
+   
+}
+
+.login-img{ margin-left: 30px;
+}

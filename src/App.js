@@ -17,6 +17,7 @@ import AdminProduct from "./Components/AdminDashboard/AdminProduct";
 import AdminAddProducts from "./Components/AdminDashboard/AdminAddProducts";
 import AdminCategories from "./Components/AdminDashboard/AdminCategories.jsx";
 import VendorOrder from "./Components/VendorDashboard/VendorOrder.jsx";
+import UserProfile from "./Components/AdminDashboard/UserProfile.jsx";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/adminProduct" element={<AdminProduct/>}/>
           <Route path="/adminAddProducts" element={<AdminAddProducts/>}/>
           <Route path="/adminCategories" element={<AdminCategories/>}/>
+          <Route path="/userprofile" element={<UserProfile/>}/>
         </Routes>
       </Router>
     </div>

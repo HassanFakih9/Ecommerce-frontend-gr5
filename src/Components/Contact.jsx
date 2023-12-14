@@ -1,5 +1,4 @@
 import '../Style/contact.css';
-
 import MenuBar from './MenuBar';
 import Footer from './Footer';
 import callcenter from '../images/callcenter.jpg'
