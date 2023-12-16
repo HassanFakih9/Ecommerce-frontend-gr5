@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuBar from "./MenuBar";
 import Footer from "../Components/Footer";
 import "../Style/OrderPage.css";
 import OrderedProducts from "./OrderedProducts";
 const OrderPage = () => {
-  const[firstName, setFirstName]= useState("")
-  const[lastName, setLastName]= useState("")
-  const[email, setEmail]= useState("")
-  const[phoneNUmber, setPhoneNUmber]= useState("")
-  const[country, setCountry]= useState("")
-  const[cityName, setCityname]= useState("")
-  const[postalCode, setPostalCode]= useState("")
-  const[streetAddress, setStreetAddress]= useState("")
-  const[totalPrice, setTotalPrice]= useState("")
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNUmber, setPhoneNUmber] = useState("");
+  const [country, setCountry] = useState("");
+  const [cityName, setCityname] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+  const [streetAddress, setStreetAddress] = useState("");
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [products, setProducts] = useState([]);
+  const [orderedProducts, setOrderedProducts] = useState([]);
 
   const handleAddShipping = async () => {
-    const vendorName = localStorage.getItem("vendorName"); // Retrieving vendorName from localStorage
     const projectBody = {
       firstName,
       lastName,
@@ -26,7 +27,7 @@ const OrderPage = () => {
       postalCode,
       streetAddress,
       totalPrice,
-      status:"pending",
+      status: "pending",
     };
 
     try {
@@ -53,6 +54,54 @@ const OrderPage = () => {
       window.alert("Error adding product. Please try again later.");
     }
   };
+
+  //   const getOrderFromLocalStorage = () => {
+
+  //   const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  //   return cart;
+
+  // };
+
+  useEffect(() => {
+    const getProductsFromCart = async () => {
+      try {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const productDetails = await Promise.all(
+          cart.map(async (itemName) => {
+            const response = await fetch(
+              `http://localhost:8000/orderedItem/getOrderedItemByProductName/${itemName}`,
+              {
+                method: "GET",
+              }
+            );
+    
+            if (response.ok) {
+              const product = await response.json();
+              return product;
+            } else {
+              throw new Error(`Failed to fetch product ${itemName}`);
+            }
+          })
+        );
+    
+        setOrderedProducts(productDetails);
+        // Calculate total price based on fetched product details
+        const calcTotalPrice = productDetails.reduce((total, product) => {
+          if (product && typeof product.price === 'number' && typeof product.quantity === 'number') {
+            return total + product.price * product.quantity;
+          } else {
+            console.error('Invalid product data:', product);
+            return total;
+          }
+        }, 0);
+        setTotalPrice(calcTotalPrice);
+        
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    
+  }, []);
 
   return (
     <div className="orderPage">
@@ -83,7 +132,10 @@ const OrderPage = () => {
               onChange={(e) => setPhoneNUmber(e.target.value)}
             />
             <p className="orderTitle">Shipping Information </p>
-            <select className=" orderInfoCont selectCountry" onChange={(e) => setCountry(e.target.value)}>
+            <select
+              className=" orderInfoCont selectCountry"
+              onChange={(e) => setCountry(e.target.value)}
+            >
               <option value="Afghanistan">Afghanistan</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -388,24 +440,28 @@ const OrderPage = () => {
               placeholder="Street Address"
               onChange={(e) => setStreetAddress(e.target.value)}
             />
-            <button className="placeOrderBtn" onClick={handleAddShipping}> Place Order</button>
+            <button className="placeOrderBtn" onClick={handleAddShipping}>
+              {" "}
+              Place Order
+            </button>
           </div>
-          <div class="vertical-line"></div>
+          <div className="vertical-line"></div>
 
           <div className="orderDiv">
             <p className="orderTitle">Your Order Detail</p>
-            <OrderedProducts />
+            <OrderedProducts products={orderedProducts} />
+
             <div className="price">
-              <p className="subText"> Products Price Total</p>
-              <p className="subText"> 1000$</p>
+              <p className="subText">Products Price Total</p>
+              <p className="subText">{totalPrice} $</p>
             </div>
             <div className="price">
               <p className="subText"> Shippin Fees</p>
-              <p className="subText"> 0$</p>
+              <p className="subText"> price$</p>
             </div>
             <div className="price">
               <p className="subText"> Total</p>
-              <p className="subText"> 1000$</p>
+              <p className="subText"> product + shipping$</p>
             </div>
           </div>
         </div>

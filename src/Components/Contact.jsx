@@ -95,7 +95,7 @@ const Contact = () => {
             <div className='contact-back'>
                 <div className='contact-back2'>
                     <div className="contact-socialmedia">
-                        <div class="contact">
+                        <div className="contact">
                             <h1 > Contact Information </h1>
                             <div className="contact-email">
                                 <img src={email} />
@@ -119,7 +119,7 @@ const Contact = () => {
                                 <h1> Find Us On </h1>
                                 <img src={callcenter2} />
                             </div>
-                            <div class="contact-email1">
+                            <div className="contact-email1">
                                 <img src={facebook} />
                                 <img src={intagram} />
                                 <img src={twitter} />
