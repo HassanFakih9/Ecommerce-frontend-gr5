@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-const VendorAddProducts = () => {
+const VendorAddProduct = () => {
   const [categories, setCategories] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -8,6 +8,29 @@ const VendorAddProducts = () => {
   const [image, setImage] = useState("");
   const [quantity, setQuantity] = useState("");
   const [imagePreview, setImagePreview] = useState("");
+  const vendorEmail = localStorage.getItem("email");
+
+  const fetchVendorName = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:8000/vendors/getVendorNameByEmail/${vendorEmail}`
+      ); // Replace '/your-backend-route/' with your actual backend route
+      const data = await response.json();
+
+      if (response.ok) {
+       
+        const vendorName = data.name + data.lastName;
+        localStorage.setItem('vendorName', vendorName)
+        console.log('vendor Name is ' + vendorName)
+      } else {
+        console.error("Error:", data.message);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  fetchVendorName();
 
   const fetchCategories = async () => {
     try {
@@ -28,7 +51,7 @@ const VendorAddProducts = () => {
       description,
       price,
       category,
-      vendorName,
+      vendorName:vendorName,
       image,
       quantity,
     };
@@ -142,4 +165,4 @@ const VendorAddProducts = () => {
   );
 };
 
-export default VendorAddProducts;
+export default VendorAddProduct;

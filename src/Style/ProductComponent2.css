@@ -101,6 +101,7 @@
     margin-bottom: 20px;
     border-radius: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .productcomp-name {
@@ -130,6 +131,38 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.confirmation-modal{
+    width: 350px;
+    height: 150px;
+    border: 2px solid #657fc7;
+    border-radius: 10px;
+   
+}
+.cond{
+    height: 60%;
+    border-bottom:  2px solid #657fc6;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.Okbutton{
+    display: flex;
+    justify-content: right; 
+    padding: 5px; 
+    height:30%
+}
+.OkOrder{
+    width: 70px;
+    height: 32px;
+    background-color: #675FC7;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+     
 }
 
 @media screen and (min-width: 360px) and (max-width: 1024px) {

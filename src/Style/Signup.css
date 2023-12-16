@@ -50,10 +50,7 @@
 .back-img {
     height: 40px;
     width: 40px;
-
 }
-
-
 
 .submitbt {
     background-color: #675fc7;
@@ -66,8 +63,6 @@
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
-
-
 }
 
 .btn-signup {
@@ -75,7 +70,6 @@
     justify-content: center;
     align-items: center;
     color: #675fc7;
-
 }
 
 .signup-div2 {

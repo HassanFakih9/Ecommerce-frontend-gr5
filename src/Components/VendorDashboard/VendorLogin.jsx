@@ -12,6 +12,12 @@ const VendorLogin = () => {
         const data = await response.json();
        
         if (data && data.length > 0) {
+          localStorage.removeItem('email');
+          localStorage.removeItem('password');
+          localStorage.setItem('email', email);
+          localStorage.setItem('password', password);
+
+          // Redirect to VendorDash page
           window.location.href = '/VendorDash';
         } else {
           alert('Incorrect email or password');

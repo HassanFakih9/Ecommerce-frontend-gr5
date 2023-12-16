@@ -7,8 +7,6 @@ import shoppingCart from '../images/shopping-cart.svg';
 import { Link } from 'react-router-dom';
 import OrderedProducts from './OrderedProducts';
 
-
-
 const MenuBar = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -23,7 +21,6 @@ const MenuBar = () => {
   const handleMenu = () => {
     setMenu(!showMenu)
   }
-
 
   return (
     <div className="MenuBar">
@@ -75,15 +72,16 @@ const MenuBar = () => {
         <Link to="/Signup">
           <img src={useradd} className="logoImage1" alt="add user" />
         </Link>
+        <Link to="/OrderPage">
         <img
           src={shoppingCart}
           className="logoImage"
           alt="shopping cart"
-          onClick={handleCartClick}
         />
+        </Link>
       </div>
       {/* Modal */}
-      {showModal && (
+      {/* {showModal && (
         <div className="orderDetailModal" onClick={handleCloseModal}>
           <p className="menu-li"> Your Order</p>
           <OrderedProducts />
@@ -94,7 +92,7 @@ const MenuBar = () => {
             </Link>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
