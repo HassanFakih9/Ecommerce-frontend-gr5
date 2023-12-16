@@ -74,7 +74,7 @@ const OrderPage = () => {
                 method: "GET",
               }
             );
-    
+
             if (response.ok) {
               const product = await response.json();
               return product;
@@ -83,7 +83,7 @@ const OrderPage = () => {
             }
           })
         );
-    
+
         setOrderedProducts(productDetails);
         // Calculate total price based on fetched product details
         const calcTotalPrice = productDetails.reduce((total, product) => {
@@ -95,12 +95,12 @@ const OrderPage = () => {
           }
         }, 0);
         setTotalPrice(calcTotalPrice);
-        
+
       } catch (error) {
         console.error("Error:", error);
       }
     };
-    
+
   }, []);
 
   return (
@@ -445,23 +445,27 @@ const OrderPage = () => {
               Place Order
             </button>
           </div>
-          <div className="vertical-line"></div>
+          <div className="vertical-line">
 
-          <div className="orderDiv">
-            <p className="orderTitle">Your Order Detail</p>
-            <OrderedProducts products={orderedProducts} />
-
-            <div className="price">
-              <p className="subText">Products Price Total</p>
-              <p className="subText">{totalPrice} $</p>
-            </div>
-            <div className="price">
-              <p className="subText"> Shippin Fees</p>
-              <p className="subText"> price$</p>
-            </div>
-            <div className="price">
-              <p className="subText"> Total</p>
-              <p className="subText"> product + shipping$</p>
+            <div className="orderDiv">
+              <p className="orderTitle">Your Order Detail</p>
+              <OrderedProducts products={orderedProducts} />
+              <div className="order-shipping">
+              <div className="order-shipping1">
+                <div className="price">
+                  <p className="subText">Products Price Total</p>
+                  <p className="subText">{totalPrice} $</p>
+                </div>
+                <div className="price">
+                  <p className="subText"> Shipping Fees</p>
+                  <p className="subText"> price$</p>
+                </div>
+                <div className="price">
+                  <p className="subText"> Total</p>
+                  <p className="subText"> product + shipping$</p>
+                </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
