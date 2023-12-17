@@ -1,121 +1,89 @@
 .signup {
-    display: flex;
-    height: 100vh;
-
+  display: flex;
+  height: 100vh;
 }
 
 .signup-div {
-    background-color: #675fc7;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    width: 50%;
-
-
+  background-color: #675fc7;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 50%;
 }
 
-
-
 .signup-div1 {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 50px;
-
-
-
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .signup-div p {
-    font-size: larger;
-
+  font-size: larger;
 }
 
 .signup-image {
-    height: 400px;
-    width: 400px;
-    margin-bottom: 15px;
-
-
+  height: 400px;
+  width: 400px;
+  margin-bottom: 15px;
 }
 
 .signup-title {
-    margin-top: 50px;
-    font-size: 40px;
-    text-align: center;
-    color: #675fc7;
-    font-weight: bold;
+  margin-top: 50px;
+  font-size: 40px;
+  text-align: center;
+  color: #675fc7;
+  font-weight: bold;
 }
 
 .back-img {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .submitbt {
-    background-color: #675fc7;
-    border: none;
-    height: 40px;
-    width: 170px;
-    color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
+  background-color: #675fc7;
+  border: none;
+  height: 40px;
+  width: 170px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .btn-signup {
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    color: #675fc7;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  color: #675fc7;
 }
 
 .signup-div2 {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
 
 @media screen and (min-width: 360px) and (max-width: 1024px) {
-    .signup {
-        display: flex;
-        flex-direction: column;
-    }
+  
+  .signup-div2 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0px;
+  }
 
-    
+  .signup-div {
+    display: none;
+  }
 
-    
-    .signup-image {
-        display: none;
-    }
-
-    
-    .signup-div2 {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin-top: 0px;
-    }
-
-    .signup-div {
-        align-items: flex-start;
-       
-        width: 100%;
-
-
-    }
-
-    .signup-div1 {
-        margin-bottom: 20px;
-        margin-top: 00px;
-    
-    
-    
-    }
-    
+  .signup-div1 {
+    margin-bottom: 20px;
+    margin-top: 00px;
+  }
 }

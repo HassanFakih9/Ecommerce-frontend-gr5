@@ -24,7 +24,7 @@ const AdminVendors = () => {
       <div className="Admin-table">
         <p className="order-title"> Vendors</p>
 
-        <table>
+        <table className='tableDes'>
           <tr>
             <td>Name</td>
             <td>Last-Name</td>

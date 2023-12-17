@@ -115,7 +115,7 @@ const AdminProduct = () => {
         </div>
 
         <div className="table1">
-          <table>
+          <table className='tableDes'>
             <thead>
               <tr>
                 <th>Name</th>

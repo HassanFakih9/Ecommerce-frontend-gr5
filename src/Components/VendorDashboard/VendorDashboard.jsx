@@ -42,7 +42,7 @@ const VendorDashboard = () => {
       </div>
 
       <div className="table1">
-        <table>
+        <table className='tableDes'>
           <tr>
             <th>Name</th>
             <th>Description</th>

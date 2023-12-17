@@ -38,14 +38,14 @@ const VendorAddProduct = () => {
         "http://localhost:8000/category/getAllCategories"
       );
       const data = await response.json();
-      setCategories(data); // Assuming the response returns an array of category objects
+      setCategories(data); 
     } catch (error) {
       console.error("Error fetching categories:", error);
     }
   };
 
   const handleAddProject = async () => {
-    const vendorName = localStorage.getItem("vendorName"); // Retrieving vendorName from localStorage
+    const vendorName = localStorage.getItem("vendorName"); 
     const projectBody = {
       name,
       description,

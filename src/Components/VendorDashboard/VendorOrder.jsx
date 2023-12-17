@@ -15,7 +15,7 @@ const VendorOrder = () => {
                 <div className="vendor-table">
                     <p className="order-title"> Vendor Order</p>
                     <div className="table1">
-                        <table>
+                        <table className='tableDes'>
                             <tr>
                                 <th>Name</th>
                                 <th>Last-Name</th>

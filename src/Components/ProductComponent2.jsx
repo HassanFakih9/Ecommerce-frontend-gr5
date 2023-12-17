@@ -39,7 +39,7 @@ const ProductComponent2 = () => {
       ) : (
         <p>Loading...</p>
       )}
-      <div className="product-similar">
+      {/* <div className="product-similar">
         <h1 className="productcomp-name"> Similar Products</h1>
         <div className="product-laptop">
           <div>
@@ -57,7 +57,7 @@ const ProductComponent2 = () => {
             <p className="product-laptop">HP EliteBook 840 14”G10 NoteBook</p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </div>

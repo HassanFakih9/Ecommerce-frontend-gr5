@@ -1,18 +1,47 @@
 import "../Style/Login.css";
 import login from "../images/login.png";
-import user from "../images/user.svg";
 import password from "../images/password.svg";
 import email from "../images/email.svg";
 import back from "../images/back.svg";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+
 const Login = () => {
+  const [emailValue, setEmailValue] = useState("");
+  const [passwordValue, setPasswordValue] = useState("");
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClientLogin = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:8000/client/clientLogin/${emailValue}/${passwordValue}`
+      );
+
+      if (response.data && response.data.length > 0) {
+        localStorage.removeItem("email");
+        localStorage.setItem("email", emailValue);
+        setShowModal(true);
+      } else {
+      alert("Email or Passowrd entered is not valid");
+       
+      }
+    } catch (error) {
+      console.error("Login failed:", error.message);
+    }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
     <div className="login">
       <div className="login-div">
         <div className="back">
-
-          <Link to="/"><img src={back} className="back-img" /></Link>
-
+          <Link to="/">
+            <img src={back} className="back-img" />
+          </Link>
         </div>
         <div className="login-div1">
           <img src={login} className="login-image" />
@@ -27,35 +56,58 @@ const Login = () => {
       <div className="login-div2">
         <div className="part1">
           <div className="part2">
-
-            <p className="login-title">
-              USER LOGIN
-            </p>
+            <p className="login-title">USER LOGIN</p>
             <div className="user1">
+              <img src={email} className="login-img" />
 
-                            <img src={email} className="login-img" />
-
-                            <div className=" text">
-                                <input type="text" id="username" placeholder="Email" className="login-input" />
-                            </div>
-                        </div>
+              <input
+                  type='text'
+                  placeholder='Email'
+                  className='login-input'
+                  onChange={(e) => setEmailValue(e.target.value)}
+                />
+              </div>
+            </div>
             <div className="user1">
-
               <img src={password} className="login-img" />
 
               <div className="text">
-                <input type="password" id="username" placeholder="Password" className="login-input" />
+              <input
+                  type='password'
+                  placeholder='Password'
+                  className='login-input'
+                  onChange={(e) => setPasswordValue(e.target.value)}
+                />
               </div>
             </div>
 
-            <button type="button" className="loginbt">
+            <button type='button' className='loginbt' onClick={handleClientLogin}>
               Log In
             </button>
-            <p className="loginp"> Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link></p>
+            <p className="loginp">
+              {" "}
+              Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link>
+            </p>
           </div>
         </div>
+        {showModal && (
+        <div>
+          {/* Overlay */}
+          <div className="overlay show" onClick={closeModal}></div>
+
+          {/* Modal */}
+          <div className="confirmation-modal show">
+            <div className="cond">You Signed Up Successfully</div>
+            <div className="Okbutton">
+              <Link to="/">
+                <button className="OkOrder">Continue To Website</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
       </div>
-    </div>
+  
   );
 };
 

@@ -45,16 +45,18 @@
     margin-top: 20px;
 }
 
-table {
+.tableDes {
     margin-top: 50px;
     border-collapse: collapse;
-    width: 750px;
-    height: 100px;
+    width: fit-content;
+    height: fit-content;
     text-align: center;
+    border: 1px solid #675FC7;
 }
 
-table td {
+.tableDes td {
     padding: 10px;
+    border: 1px solid #675FC7;
 }
 
 /* ---------------------------AdminProduct */

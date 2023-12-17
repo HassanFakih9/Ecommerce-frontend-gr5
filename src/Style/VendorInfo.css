@@ -48,13 +48,7 @@
 /* 
 ---------------------------------------------------------- */
 /* -------------------Vendor Table------------------------------ */
-.table,
-th,
-td {
-    border: solid;
-    color: #675FC7;
-    font-size: 24px;
-}
+
 
 .order-title {
     text-align: center;

@@ -1,11 +1,15 @@
 import "../Style/ProductComponent2.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { Link } from 'react-router-dom';
 import arrowup from "../images/arrowup.svg";
 import arrowdown from "../images/arrowdown.svg";
+import { useParams } from 'react-router-dom'; // Import useParams from react-router-dom
 
-const ProductDetails = ({ id, image, name, vendor, description, price }) => {
+const ProductDetails = ({ image, name, vendor, description, price }) => {
   const [quantity, setQuantity] = useState(1);
+  const [showModal, setShowModal] = useState(false);
+  const { id } = useParams();
+console.log ( " the id of the product " + id)
   useEffect(() => {});
   const handledecrement = () => {
     if (quantity > 1) {
@@ -18,20 +22,31 @@ const ProductDetails = ({ id, image, name, vendor, description, price }) => {
     }
   };
 
-  const addToCart = async () => {
-    try {
-      await axios.post("http://localhost:8000/orderedItem/addOrderedItem", {
-        productName: name,
-        price: price,
-        quantity: quantity,
-        userEmail:localStorage.getItem('userEmail')
-      });
-      let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-      cartItems.push(name);
-      localStorage.setItem("cart", JSON.stringify(cartItems));
-    } catch (error) {
-      console.error("Error adding product to cart:", error);
+  const addToCart = () => {
+    const product = {
+      id: id,
+      quantity: quantity,
+    };
+  
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProductIndex = cartItems.findIndex(
+      (item) => item.id === product.id
+    );
+  
+    if (existingProductIndex !== -1) {
+      // If the product already exists in the cart, update its quantity
+      cartItems[existingProductIndex].quantity += product.quantity;
+    } else {
+      // If the product is not in the cart, add it to the cart items
+      cartItems.push(product);
     }
+  
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    setShowModal(true);
+  };
+  
+  const closeModal = () => {
+    setShowModal(false);
   };
   return (
     <div className="productcomp-title" key={id}>
@@ -74,12 +89,28 @@ const ProductDetails = ({ id, image, name, vendor, description, price }) => {
           </button>
         </div>
       </div>
-      <div className="confirmation-modal">
-        <div className="cond">Item Added To Cart</div>
-        <div className="Okbutton">
-          <button className="OkOrder"> OK</button>
+    {/* Confirmation Modal */}
+    {showModal && (
+        <div>
+          {/* Overlay */}
+          <div className="overlay show" onClick={closeModal}></div>
+
+          {/* Modal */}
+          <div className="confirmation-modal show">
+            <div className="cond">Item Added To Cart</div>
+            <div className="Okbutton">
+            <button className="OkOrder" onClick={closeModal}>
+              Continue Shopping
+              </button>
+          <Link to='/OrderPage'>
+              <button className="OkOrder" >
+                Place Order
+              </button>
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
