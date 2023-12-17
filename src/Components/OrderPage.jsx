@@ -569,57 +569,35 @@ const OrderPage = () => {
                 placeholder="Postal Code"
                 onChange={(e) => setPostalCode(e.target.value)}
               />
-
-              <input
-                type="text"
-                className="orderInfoCont"
-                placeholder="Street Address"
-                onChange={(e) => setStreetAddress(e.target.value)}
-              />
-              <button className="placeOrderBtn" onClick={handleAddShipping}>
-                {" "}
-                Place Order
-              </button>
             </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-      {/* Confirmation Modal */}
-      {showModal && (
-        <div>
-          {/* Overlay */}
-          <div className="overlay show" onClick={closeModal}></div>
-
-          {/* Modal */}
-          <div className="confirmation-modal show">
-            <div className="cond">Ordered Placed Succesfully</div>
-            <div className="Okbutton">
-              <button className="OkOrder" onClick={closeModal}>
-                OK
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-      {isLoggedIn && (
-        <div>
-          {/* Overlay */}
-          <div className="overlay show" onClick={closeModal}></div>
-
-          {/* Modal */}
-          <div className="confirmation-modal show">
-            <div className="cond">
+            <input
+              type="text"
+              className="orderInfoCont"
+              placeholder="Street Address"
+              onChange={(e) => setStreetAddress(e.target.value)}
+            />
+            <button className="placeOrderBtn" onClick={handleAddShipping}>
               {" "}
-              Please log in before proceeding with shipping.
+              Place Order
+            </button>
+          </div>
+          <div className="vertical-line"></div>
+
+          <div className="orderDiv">
+            <p className="orderTitle">Your Order Detail</p>
+            <OrderedProducts products={orderedProducts} />
+
+            <div className="price">
+              <p className="subText">Products Price Total</p>
+              <p className="subText">{totalPrice} $</p>
             </div>
-            <div className="Okbutton">
-              <Link to="/Login">
-                <button className="OkOrder">Log In</button>
-              </Link>
-              <button className="OkOrder" onClick={closeModal}>
-                Cancel
-              </button>
+            <div className="price">
+              <p className="subText"> Shippin Fees</p>
+              <p className="subText"> price$</p>
+            </div>
+            <div className="price">
+              <p className="subText"> Total</p>
+              <p className="subText"> product + shipping$</p>
             </div>
           </div>
         </div>

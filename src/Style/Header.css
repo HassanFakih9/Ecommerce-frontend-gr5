@@ -1,6 +1,6 @@
 .header {
     background-color: #656FC7;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,7 @@
     width: 95%;
     border-radius: 25px;
 }
+
 
 .rowFlex {
     display: flex;
@@ -63,9 +64,11 @@
 
         flex-direction: column;
     }
+
     .header-container {
         margin-bottom: 20px;
     }
+
     .inside-header-container {
         width: 100%;
         padding: 0px;
@@ -73,15 +76,20 @@
     }
 
     .shopBtn {
-   align-self: center;
-   margin-bottom: 15px;
+        align-self: center;
+        margin-bottom: 15px;
     }
-    
+
+    .bigText {
+        font-size: 35px;
+    }
+
     .gif {
         display: none;
     }
 
     .header {
         background-color: #656FC7;
-        height: 100%;}
+        height: 100%;
+    }
 }
