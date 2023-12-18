@@ -58,7 +58,7 @@ const Login = () => {
           <div className="part2">
             <p className="login-title">USER LOGIN</p>
             <div className="user1">
-              <img src={email} className="login-img" />
+              <img src={email} className="login-img1" />
 
               <input
                   type='text'

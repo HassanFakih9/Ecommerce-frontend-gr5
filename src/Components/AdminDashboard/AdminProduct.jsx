@@ -1,5 +1,8 @@
 import "../../Style/VendorInfo.css";
 import axios from "axios";
+import back from "../../images/back.svg";
+
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 const AdminProduct = () => {
   const [products, setProducts] = useState([]);
@@ -99,6 +102,11 @@ const AdminProduct = () => {
 
   return (
     <div>
+      <div className="back">
+          <Link to="/">
+            <img src={back} className="back-img" />
+          </Link>
+        </div>
       <div className="product">
         <p className="order-title">Product List</p>
         <div className="enter-product">
