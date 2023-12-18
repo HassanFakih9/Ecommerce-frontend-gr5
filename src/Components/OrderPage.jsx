@@ -182,6 +182,7 @@ const OrderPage = () => {
   };
 
   return (
+    
     <div className="orderPage">
       <MenuBar />
       <div className="orderContainer">
@@ -576,10 +577,12 @@ const OrderPage = () => {
                 placeholder="Street Address"
                 onChange={(e) => setStreetAddress(e.target.value)}
               />
+              <div className="buttonorder"> 
               <button className="placeOrderBtn" onClick={handleAddShipping}>
                 {" "}
                 Place Order
               </button>
+              </div>
             </div>
           </div>
         </div>

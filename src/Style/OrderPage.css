@@ -1,4 +1,4 @@
-.orderContainer{
+.orderContainer {
     width: 90%;
     height: fit-content;
     padding: 15px;
@@ -9,51 +9,56 @@
     margin-left: 30px;
     margin-bottom: 15px;
 }
-.custTitle{
+
+.custTitle {
     color: #656FC7;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 30px
-
 }
-.orderedProductInfo{
+
+.orderedProductInfo {
     display: flex;
     flex-direction: row;
-    margin:10px 0 ;
+    margin: 10px 0;
     width: fit-content;
     height: fit-content;
     padding: 15px;
-   
+
 }
-.CutomerOrderContainer{
+
+.CutomerOrderContainer {
     display: flex;
     flex-direction: column;
 }
-.displayFlex{
+
+.displayFlex {
     display: flex;
-   align-items: center;
-   justify-content: center;
-   border-bottom: 1px solid #656FC7 ;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #656FC7;
 }
-.productImg{
+
+.productImg {
     width: 200px;
     height: 200px;
     border-radius: 10px;
     margin-right: 50px;
 }
 
-.orderProductName{
+.orderProductName {
     width: 150px;
     margin-right: 10px;
     font-size: 18px;
 }
-.bin{
+
+.bin {
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
 
-.colDiv{
+.colDiv {
     width: 92%;
     display: flex;
     flex-direction: column;
@@ -61,7 +66,7 @@
     margin-left: 20px;
 }
 
-.orderInfoDiv{
+.orderInfoDiv {
 
     padding: 15px;
     background-color: #f2f3f8;
@@ -71,16 +76,17 @@
     margin-bottom: 15px;
 }
 
-.summaryTable{
+.summaryTable {
     border: none;
 }
-.summaryTd{
+
+.summaryTd {
     font-size: 18px;
     font-weight: bold;
-    padding-right:  100px;
+    padding-right: 100px;
 }
 
-.totalCont{
+.totalCont {
     display: flex;
     border-top: 1px solid #656FC7;
     margin: 10px 0;
@@ -88,22 +94,23 @@
     padding-left: 5px;
 }
 
-.shippingDiv{
+.shippingDiv {
     display: flex;
     flex-direction: row;
 }
-.infoFlex{
+
+.infoFlex {
     display: flex;
     flex-direction: column;
     margin-right: 25%;
 }
 
-.orderTitle{
+.orderTitle {
     font-size: 20px;
     margin-bottom: 13px;
 }
 
-.orderInfoCont{
+.orderInfoCont {
     width: 300px;
     height: 20px;
     padding: 10px;
@@ -112,12 +119,12 @@
     margin-bottom: 15px;
 }
 
-.selectCountry{
+.selectCountry {
     width: 325px;
     height: 40px;
 }
 
-.placeOrderBtn{
+.placeOrderBtn {
     width: 150px;
     height: 40px;
     background-color: #656FC7;
@@ -127,4 +134,39 @@
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+
+    .shippingDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .orderContainer {
+        width: 92%;
+        height: fit-content;
+        padding: 0px;
+
+
+    }
+
+    .colDiv {
+
+        padding: 0px;
+        margin-left: 0px;
+    }
+
+    .orderContainer {
+        padding: 0px;
+        margin-left: 0px;
+    }
+
+    .buttonorder {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    
 }
