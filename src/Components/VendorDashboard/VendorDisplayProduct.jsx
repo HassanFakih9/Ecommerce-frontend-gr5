@@ -118,7 +118,7 @@ const VendorDisplayProduct = () => {
         </div>
 
         <div className="table1">
-          <table className='tableDes'>
+          <table>
             <thead>
               <tr>
                 <th>Name</th>

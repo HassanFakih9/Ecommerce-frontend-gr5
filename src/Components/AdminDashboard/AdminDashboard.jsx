@@ -6,6 +6,7 @@ import AdminProduct from './AdminProduct';
 import AdminCategories from './AdminCategories';
 import AdminInfo from './AdminAddVendor';
 import AdminAddProducts from './AdminAddProducts';
+import AdminClient from './AdminClients';
 
 const AdminDashboard = () => {
  
@@ -26,6 +27,9 @@ const AdminDashboard = () => {
             break;
           case "categories":
             setActiveSection("categories");
+            break; 
+            case "clients":
+            setActiveSection("clients");
             break;
           default:
             setActiveSection(null);
@@ -41,6 +45,8 @@ const AdminDashboard = () => {
           <li className='dash-menu-li' onClick={() => handleClick("adminProduct")}>Products On Website</li>
           <li className='dash-menu-li'onClick={() => handleClick("addVendor")}>Add Vendor To The Website</li>
           <li className='dash-menu-li'onClick={() => handleClick("categories")}>Categories </li>
+          <li className='dash-menu-li'onClick={() => handleClick("clients")}>Clients </li>
+        
         </ul>
       </div>
           <hr/>
@@ -59,6 +65,9 @@ const AdminDashboard = () => {
       </div>
       <div id="categories" style={{ display: activeSection === "categories" ? "block" : "none" }}>
       <AdminCategories/>
+      </div>
+      <div id="clients" style={{ display: activeSection === "clients" ? "block" : "none" }}>
+      <AdminClient/>
       </div>
     </div>
       </div>
