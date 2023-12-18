@@ -66,7 +66,7 @@ console.log ( " the id of the product " + id)
         </p>
         <p className="product-price">
           {" "}
-          <p className="product-bold">Price: </p> {price} $
+          <p className="product-bold1">Price: </p> {price} $
         </p>
         <div className="product-quantity1">
           <div className="product-quantity">

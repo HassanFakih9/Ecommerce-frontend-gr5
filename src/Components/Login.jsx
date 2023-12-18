@@ -3,8 +3,8 @@ import login from "../images/login.png";
 import password from "../images/password.svg";
 import email from "../images/email.svg";
 import back from "../images/back.svg";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Login = () => {

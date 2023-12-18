@@ -168,5 +168,23 @@
         justify-content: center;
     }
 
-    
+    .displayFlex {
+        flex-direction: column;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .productImg {
+        width: 140px;
+        height: 140px;
+    }
+
+    .bin {
+        width: 30px;
+        height: 30px;
+        margin-left: 100px;
+    }
+
+    .custTitle {margin-top: 20px;
+    margin-left: 20px;}
 }
