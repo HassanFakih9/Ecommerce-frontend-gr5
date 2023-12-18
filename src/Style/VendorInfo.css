@@ -57,6 +57,9 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
+.submitbt{ 
+    margin-right: 15px;
+}
 
 .vendor-order {
     display: flex;
