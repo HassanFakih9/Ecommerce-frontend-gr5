@@ -51,11 +51,11 @@ console.log ( " the id of the product " + id)
   return (
     <div className="productcomp-title" key={id}>
       <div className="product">
-        <h1 className="productcomp-name"> {name}</h1>
+       
         <img src={image} className="product-hppavillon" />
       </div>
       <div className="productdetail">
-        <h1 className="productcomp-name"> Products Details</h1>
+        <h1 className="productcomp-name"> {name}</h1>
         <div className="product-model">
           {" "}
           <p className="product-bold"> By :</p> {vendor}{" "}

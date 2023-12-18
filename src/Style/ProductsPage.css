@@ -29,7 +29,7 @@
 }
 
 .allProducts {
-    margin-left: -8%;
+    margin-left: 50px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
 }
