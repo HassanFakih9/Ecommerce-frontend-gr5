@@ -7,9 +7,12 @@ import AdminCategories from './AdminCategories';
 import AdminInfo from './AdminAddVendor';
 import AdminAddProducts from './AdminAddProducts';
 import AdminClient from './AdminClients';
-
+import logOut from '../../images/log-out.svg'
 const AdminDashboard = () => {
- 
+  const handleLogout=()=>{
+    sessionStorage.removeItem('adminEmail');
+    window.location.href='/admin';
+  }
     const [activeSection, setActiveSection] = useState(null);
     const handleClick = (section) => {
         switch(section) {
@@ -46,7 +49,7 @@ const AdminDashboard = () => {
           <li className='dash-menu-li'onClick={() => handleClick("addVendor")}>Add Vendor To The Website</li>
           <li className='dash-menu-li'onClick={() => handleClick("categories")}>Categories </li>
           <li className='dash-menu-li'onClick={() => handleClick("clients")}>Clients </li>
-        
+          <li className='dash-menu-li'onClick={handleLogout}><img src={logOut} className='logOut'/> </li>
         </ul>
       </div>
           <hr/>

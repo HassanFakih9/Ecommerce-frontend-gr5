@@ -16,8 +16,8 @@ const AdminLogin = () => {
 
         if (data && data.length > 0) {
 
-        localStorage.setItem('adminEmail', email);
-        localStorage.setItem('adminPassword', password);
+        sessionStorage.setItem('adminEmail', email);
+        sessionStorage.setItem('isAdmin', 'true');
         window.location.href='/adminDash';
       } else {
         alert('Incorrect email or password');
