@@ -151,10 +151,7 @@ const OrderPage = () => {
       }
     }
   };
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
+ 
   const calculateSubtotal = () => {
     let subtotal = 0;
     for (const product of productsWithDetails) {
@@ -175,6 +172,10 @@ const OrderPage = () => {
       localStorage.setItem("cart", JSON.stringify(updatedCartItems));
       return updatedCartItems;
     });
+  };
+  const closeModal = () => {
+    setIsLoggedIn(false)
+    setShowModal(false);
   };
 
   return (
