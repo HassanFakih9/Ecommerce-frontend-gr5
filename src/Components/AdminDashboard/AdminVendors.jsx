@@ -11,7 +11,7 @@ const AdminVendors = () => {
       .get(apiUrl)
       .then((response) => {
         setData(response.data);
-        console.log(response.data);
+       
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -26,7 +26,7 @@ const AdminVendors = () => {
     axios
       .delete(`http://localhost:8000/vendors/deleteVendorById/${id}`)
       .then((response) => {
-        console.log(response.data);
+       
         fetchVendors(); // Refresh the vendor list after deletion
       })
       .catch((error) => {
@@ -53,7 +53,7 @@ const AdminVendors = () => {
           selectedVendor
         )
         .then((response) => {
-          console.log(response.data);
+         
           fetchVendors(); // Refresh the vendor list after update
           handleCloseModal();
         })

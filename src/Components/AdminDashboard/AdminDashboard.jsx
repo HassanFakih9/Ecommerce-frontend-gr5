@@ -8,6 +8,8 @@ import AdminInfo from './AdminAddVendor';
 import AdminAddProducts from './AdminAddProducts';
 import AdminClient from './AdminClients';
 import logOut from '../../images/log-out.svg'
+import AdminOrderDetails from './AdminOrderDetails';
+import ShippingDetails from './ShippingDetails';
 const AdminDashboard = () => {
   const handleLogout=()=>{
     sessionStorage.removeItem('adminEmail');
@@ -34,6 +36,12 @@ const AdminDashboard = () => {
             case "clients":
             setActiveSection("clients");
             break;
+            case "shippings":
+              setActiveSection("shippings");
+              break;
+              case "orderDetails":
+                setActiveSection("orderDetails");
+                break;
           default:
             setActiveSection(null);
         }
@@ -49,6 +57,8 @@ const AdminDashboard = () => {
           <li className='dash-menu-li'onClick={() => handleClick("addVendor")}>Add Vendor To The Website</li>
           <li className='dash-menu-li'onClick={() => handleClick("categories")}>Categories </li>
           <li className='dash-menu-li'onClick={() => handleClick("clients")}>Clients </li>
+          <li className='dash-menu-li'onClick={() => handleClick("shippings")}>Shipping Details </li>
+          <li className='dash-menu-li'onClick={() => handleClick("orderDetails")}>Order Details </li>
           <li className='dash-menu-li'onClick={handleLogout}><img src={logOut} className='logOut'/> </li>
         </ul>
       </div>
@@ -71,6 +81,12 @@ const AdminDashboard = () => {
       </div>
       <div id="clients" style={{ display: activeSection === "clients" ? "block" : "none" }}>
       <AdminClient/>
+      </div>
+      <div id="orderDetails" style={{ display: activeSection === "orderDetails" ? "block" : "none" }}>
+      <AdminOrderDetails/>
+      </div>
+      <div id="shippings" style={{ display: activeSection === "shippings" ? "block" : "none" }}>
+      <ShippingDetails/>
       </div>
     </div>
       </div>

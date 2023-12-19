@@ -40,7 +40,7 @@ const AdminProduct = () => {
           selectedProduct
         )
         .then((response) => {
-          console.log(response.data);
+         
           getAllProducts(); // Refresh the vendor list after update
           handleCloseModal();
         })
@@ -64,7 +64,7 @@ const AdminProduct = () => {
       const response = await axios.delete(
         `http://localhost:8000/products/deleteProductById/${productId}`
       );
-      console.log(response.data);
+     
       getAllProducts();
     } catch (error) {
       console.error(error);

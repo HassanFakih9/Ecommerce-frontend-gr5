@@ -11,7 +11,7 @@ const AdminClient = () => {
       .get(apiUrl)
       .then((response) => {
         setData(response.data);
-        console.log(response.data);
+       
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -26,7 +26,7 @@ const AdminClient = () => {
     axios
       .delete(`http://localhost:8000/client/deleteClientById/${id}`)
       .then((response) => {
-        console.log(response.data);
+       
         fetchClients(); // Refresh the cient list after deletion
       })
       .catch((error) => {
@@ -53,7 +53,7 @@ const AdminClient = () => {
           selectedClient
         )
         .then((response) => {
-          console.log(response.data);
+         
           fetchClients(); // Refresh the cient list after update
           handleCloseModal();
         })

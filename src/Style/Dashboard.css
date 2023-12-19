@@ -55,7 +55,7 @@
 .side-menu{
 background:#675FC7 ;
 width: 15%;
-height: 100%;
+height: fit-content%;
 text-align: center;
 padding: 10px;
 }

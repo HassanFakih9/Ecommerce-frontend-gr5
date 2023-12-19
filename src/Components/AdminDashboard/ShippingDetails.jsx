@@ -5,7 +5,34 @@ import back from "../../images/back.svg";
 import { Link } from "react-router-dom";
 
 const ShippingDetails = () => {
- 
+  const [data, setData] = useState([]);
+  const fetchShippingDetails = () => {
+    const apiUrl = "http://localhost:8000/shipping/getAllShippingOrders";
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        setData(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+  const handleDelete = (id) => {
+    axios
+      .delete(`http://localhost:8000/shipping/deleteShippingById/${id}`)
+      .then((response) => {
+        
+        fetchShippingDetails(); // Refresh the cient list after deletion
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+  useEffect(() => {
+    fetchShippingDetails();
+  }, []);
+
   return (
   
        
@@ -33,33 +60,34 @@ const ShippingDetails = () => {
             <td>Status</td>
             <td>Actions</td>
           </tr>
-          
-            <tr>
-              <td> </td>
-              <td></td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
+          {data.map((shipping) => (
+            <tr key={shipping._id}>
+              <td>{shipping.firstName} </td>
+              <td>{shipping.lastName}</td>
+              <td>{shipping.email} </td>
+              <td>{shipping.phoneNUmber} </td>
+              <td>{shipping.country} </td>
+              <td>{shipping.cityName} </td>
+              <td>{shipping.postalCode} </td>
+              <td>{shipping.streetAddress} </td>
+              <td>{shipping.totalPrice} </td>
+              <td>{shipping.date} </td>
+              <td>{shipping.status} </td>
            
               <td><div className="button-containor">
                 <button type="button" className="submitbt">
                   Update Order
                 </button>
-
-
-                <button type="button" className="productbtn-delete">
-                  Cancel Order
+                <button type="button"
+                 className="productbtn-delete"
+                 onClick={() => handleDelete(shipping._id)}
+                 >
+                Delete Order
                 </button>
               </div>
               </td>
             </tr>
-          
+            ))}
         </table>
       </div>
     </div>

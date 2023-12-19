@@ -99,11 +99,10 @@ const OrderPage = () => {
     if (!emailFromLocalStorage) {
       setIsLoggedIn(true);
       setShowModal(false);
-      return; // Prevent further execution if not logged in
+      return;
     } else {
-      const currentDate = new Date().toISOString(); // Get current date in ISO format
-
-      const productsIds = cartItems.map((item) => item.id); // Extracting product IDs from cartItems
+      const currentDate = new Date().toISOString(); 
+      const productsIds = cartItems.map((item) => item.id); 
       const orderDetailBody = {
         email: emailFromLocalStorage,
         producsId: productsIds,
@@ -112,15 +111,15 @@ const OrderPage = () => {
         status: "pending",
       };
       const shippingDetails = {
-        firstName,
-        lastName,
-        email,
-        phoneNUmber,
-        country,
-        cityName,
-        postalCode,
-        streetAddress,
-        totalPrice,
+        firstName: firstName, 
+        lastName: lastName,
+        email: email,
+        phoneNUmber: phoneNUmber, 
+        country: country,
+        cityName: cityName,
+        postalCode: postalCode,
+        streetAddress: streetAddress,
+        totalPrice: total,
         status: "pending",
       };
 
@@ -141,9 +140,6 @@ const OrderPage = () => {
             "http://localhost:8000/orderDetail/addOrderDetail",
             orderDetailBody
           );
-
-          console.log("Shipping details added:", response.data);
-          console.log("Order detail added:", orderDetailResponse.data);
 
           setShowModal(true);
         } else {
@@ -235,28 +231,28 @@ const OrderPage = () => {
                 type="text"
                 className="orderInfoCont wid"
                 placeholder="First Name"
-                value={clientData.firstName}
+                // value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
               <input
                 type="text"
                 className="orderInfoCont wid"
                 placeholder="Last Name"
-                value={clientData.lastName}
+                // value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
               <input
                 type="text"
                 className="orderInfoCont"
                 placeholder="Email"
-                value={emailFromLocalStorage}
+                // value={emailFromLocalStorage}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="text"
                 className="orderInfoCont"
                 placeholder="Phone Number"
-                value={clientData.phone}
+                // value={phoneNUmber}
                 onChange={(e) => setPhoneNUmber(e.target.value)}
               />
             </div>

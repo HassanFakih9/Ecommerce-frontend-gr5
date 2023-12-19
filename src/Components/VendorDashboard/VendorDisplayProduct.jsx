@@ -62,7 +62,6 @@ const VendorDisplayProduct = () => {
       const response = await axios.delete(
         `http://localhost:8000/products/deleteProductById/${productId}`
       );
-      console.log(response.data);
       getAllProducts();
     } catch (error) {
       console.error(error);

@@ -7,29 +7,31 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+
 const Login = () => {
-  
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
   const [showModal, setShowModal] = useState(false);
 
   const handleClientLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/client/clientLogin', {
-        email: emailValue,
-        password: passwordValue,
-      });
+      const response = await axios.post(
+        'http://localhost:8000/client/clientLogin',
+        {
+          email: emailValue,
+          password: passwordValue,
+        }
+      );
 
-      if (response.data && response.data.length > 0) {
-        // Successful login logic
-        localStorage.removeItem("email");
-        localStorage.setItem("email", emailValue);
+      if (response.data && response.data.success) {
+        localStorage.removeItem('email');
+        localStorage.setItem('email', emailValue);
         setShowModal(true);
       } else {
-        alert("Email or Password entered is not valid");
+        alert('Email or Password entered is not valid');
       }
     } catch (error) {
-      console.error("Login failed:", error.message);
+      console.error('Login failed:', error.message);
     }
   };
 
