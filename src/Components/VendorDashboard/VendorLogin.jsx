@@ -18,7 +18,8 @@ const VendorLogin = () => {
         const data = response.data; 
 
         if (data && data.message === 'Vendor logged in successfully') { 
-          localStorage.setItem('email', email);
+          localStorage.removeItem('vendorEmail')
+          localStorage.setItem('vendorEmail', email);
           window.location.href='/VendorDash'; 
         } else {
           alert('Incorrect email or password');

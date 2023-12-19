@@ -21,7 +21,7 @@ const VendorInfo = () => {
     password: "",
   });
 
-  const email = localStorage.getItem("email");
+  const email = localStorage.getItem("vendorEmail");
   useEffect(() => {
     const fetchData = async () => {
       try {

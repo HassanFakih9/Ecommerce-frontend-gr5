@@ -110,20 +110,7 @@ const AdminInfo = () => {
           </div>
         </div>
 
-        {/* <div className="user1">
-          <img src={pass} className="login-img" />
-
-          <div className=" text">
-            <input
-              type="text"
-              id="password"
-              placeholder="Password"
-              className="login-input"
-              value={'test'}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-        </div> */}
+    
         <div className="user1">
           <img src={companysvg} className="login-img" />
 

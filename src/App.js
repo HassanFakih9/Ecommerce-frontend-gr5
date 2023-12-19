@@ -36,17 +36,18 @@ function App() {
           <Route path="/ProductComponent2/:id" element={<ProductComponent2 />} />
           <Route path="/Vendor" element={<VendorLogin />} />
           <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/adminDash" element={<AdminDashboard/>}/>
           <Route path="/vendorDash" element={<VendorDashboard />} />
+          {/* 
           <Route path="/vendorOrder" element={<VendorOrder />} />
           <Route path="/adminOrder" element={<AdminVendors />} />
-          <Route path="/adminDash" element={<AdminDashboard/>}/>
           <Route path="/addvendor" element={<AdminAddVendor/>}/>
           <Route path="/adminProduct" element={<AdminProduct/>}/>
           <Route path="/adminAddProducts" element={<AdminAddProducts/>}/>
           <Route path="/adminCategories" element={<AdminCategories/>}/>
           <Route path="/userprofile" element={<UserProfile/>}/>
           <Route path="/shippingdetails" element={<ShippingDetails/>}/>
-          <Route path="/adminorderdetails" element={<AdminOrderDetails/>}/>
+          <Route path="/adminorderdetails" element={<AdminOrderDetails/>}/> */}
         </Routes>
       </Router>
     </div>

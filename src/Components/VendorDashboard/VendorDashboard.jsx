@@ -4,6 +4,7 @@ import VendorAddProducts from './VendorAddProducts';
 import VendorOrder from './VendorOrder';
 import { useState } from "react";
 import VendorInfo from './VendorInfo';
+import logOut from '../../images/log-out.svg'
 const VendorDashboard = () => {
     const [activeSection, setActiveSection] = useState(null);
     const handleClick = (section) => {
@@ -24,6 +25,10 @@ const VendorDashboard = () => {
             setActiveSection(null);
         }
       };
+      const handleLogout=()=>{
+        sessionStorage.removeItem('adminEmail');
+        window.location.href='/admin';
+      }
   return (
     <div className="dashboard-container">
     <div className="side-menu">
@@ -32,7 +37,7 @@ const VendorDashboard = () => {
           <li className='dash-menu-li' onClick={() => handleClick("addProduct")}>Add Product</li>
           <li className='dash-menu-li'onClick={() => handleClick("displayProduct")}>Display Products</li>
           <li className='dash-menu-li'onClick={() => handleClick("vendorInfo")}>Your Personal Information</li>
-          {/* <li className='dash-menu-li'onClick={() => handleClick("vendorOrder")}>Your Order</li> */}
+          <li className='dash-menu-li'onClick={handleLogout}><img src={logOut} className='logOut'/> </li>
         </ul>
       </div>
           <hr/>
