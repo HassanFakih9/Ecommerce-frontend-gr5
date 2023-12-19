@@ -68,8 +68,8 @@ const Signup = () => {
       </div>
       <div className="signup-div2">
         <div className="part">
-          <div className="part1">
-            <div className="part2">
+         
+           
               <p className="signup-title">Sign Up</p>
               <div className="user1">
                 <img src={user} className="login-img" />
@@ -152,8 +152,6 @@ const Signup = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
       </div>
       {showModal && (
         <div>

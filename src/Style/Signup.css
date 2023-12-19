@@ -6,6 +6,8 @@
 .signup-div {
   background-color: #675fc7;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   color: white;
   width: 50%;
@@ -62,6 +64,7 @@
 }
 
 .signup-div2 {
+  display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;

@@ -135,7 +135,7 @@ const Contact = () => {
                     </div>
                     <div className='faq-QA'>
                         <div className='faq-question' onClick={() => showAnswer(1)} >
-                            <p> What payment do you accept ?<img src={arrowdown2} className='arrowdown2' /> </p>
+                            <p> What payment do you accept ?</p> <img src={arrowdown2} className='arrowdown2' /> 
                         </div>
                         {question1 &&
                             <div className='faq-answer'>
@@ -144,7 +144,7 @@ const Contact = () => {
                         }
 
                         <div className='faq-question' onClick={() => showAnswer(2)}>
-                            <p> When i will receive my order?<img src={arrowdown2} className='arrowdown2' /></p>
+                            <p> When i will receive my order? </p><img src={arrowdown2} className='arrowdown2' />
                         </div>
                         {question2 &&
                             <div className='faq-answer'>
@@ -153,15 +153,14 @@ const Contact = () => {
                             </div>
                         }
                         <div className='faq-question' onClick={() => showAnswer(3)}>
-                            <p> Where are you located?<img src={arrowdown2} className='arrowdown2' /></p>
-
+                            <p> Where are you located? </p> <img src={arrowdown2} className='arrowdown2' />
                         </div>
                         {question3 &&
                             <div className='faq-answer'>
                                 <p>All Across the middle east </p>
                             </div>}
                         <div className='faq-question' onClick={() => showAnswer(4)}>
-                            <p> Do you have extra fees? <img src={arrowdown2} className='arrowdown2' /></p>
+                            <p> Do you have extra fees? </p><img src={arrowdown2} className='arrowdown2' />
                         </div>
                         {question4 &&
                             <div className='faq-answer'>
