@@ -3,6 +3,7 @@ import '../Style/MenuBar.css';
 import logo from '../images/logo.jpg';
 import useradd from '../images/user-add.svg';
 import menu from '../images/menu.svg'
+import logout from '../images/logout.svg'
 import shoppingCart from '../images/shopping-cart.svg';
 import { Link } from 'react-router-dom';
 
@@ -61,7 +62,9 @@ const MenuBar = () => {
         </div>
       </div>
       <div className="loginBtn">
-        <Link to="/Signup">
+        
+      <img src={logout} className="logoImage1" alt="logout" />
+        <Link to="/Signup">  
           <img src={useradd} className="logoImage1" alt="add user" />
         </Link>
         <Link to="/OrderPage">
