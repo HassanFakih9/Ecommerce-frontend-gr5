@@ -8,12 +8,12 @@ const VendorDisplayProduct = () => {
   const [imagePreview, setImagePreview] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setselectedProduct] = useState(null);
-  const vendorName = localStorage.getItem("vendorName");
+  const vendorName= localStorage.getItem('vendorName')
   const getAllProducts = async () => {
     try {
       const response = await axios.get(
         `http://localhost:8000/products/getPoductByVendorName/${vendorName}`
-      );
+);
       setProducts(response.data);
     } catch (error) {
       console.error(error);
@@ -83,17 +83,17 @@ const VendorDisplayProduct = () => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        const base64Image = reader.result;
+        const base64Image = reader.result; 
         setselectedProduct({
           ...selectedProduct,
-          image: base64Image,
+          image: base64Image, 
         });
         setImagePreview(base64Image);
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(file); 
     }
   };
-
+  
   useEffect(() => {
     fetchCategories();
     getAllProducts();
@@ -230,6 +230,7 @@ const VendorDisplayProduct = () => {
 
             {imagePreview && (
               <img
+              
                 alt="Preview"
                 style={{ maxWidth: "200px", maxHeight: "200px" }}
                 src={selectedProduct.image || ""}

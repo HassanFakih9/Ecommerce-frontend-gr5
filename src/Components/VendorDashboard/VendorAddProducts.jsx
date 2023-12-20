@@ -8,7 +8,7 @@ const VendorAddProduct = () => {
   const [image, setImage] = useState("");
   const [quantity, setQuantity] = useState("");
   const [imagePreview, setImagePreview] = useState("");
-  const vendorEmail = localStorage.getItem("email");
+  const vendorEmail = localStorage.getItem("vendorEmail");
 
   const fetchVendorName = async () => {
     try {

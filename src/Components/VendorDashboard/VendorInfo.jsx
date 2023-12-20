@@ -1,15 +1,8 @@
 import "../../Style/VendorInfo.css";
 
-import user from "../../images/user.svg";
-import email from "../../images/email.svg";
-import phone from "../../images/phone.svg";
-import lastname from "../../images/lastname.svg";
-import company from "../../images/company.svg";
-import back from "../../images/back.svg";
-import pass from "../../images/password.svg";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 
 const VendorInfo = () => {
   const [vendorData, setVendorData] = useState({
