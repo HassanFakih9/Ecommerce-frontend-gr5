@@ -7,7 +7,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const OrderPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -101,8 +101,8 @@ const OrderPage = () => {
       setShowModal(false);
       return;
     } else {
-      const currentDate = new Date().toISOString(); 
-      const productsIds = cartItems.map((item) => item.id); 
+      const currentDate = new Date().toISOString();
+      const productsIds = cartItems.map((item) => item.id);
       const orderDetailBody = {
         email: emailFromLocalStorage,
         producsId: productsIds,
@@ -111,10 +111,10 @@ const OrderPage = () => {
         status: "pending",
       };
       const shippingDetails = {
-        firstName: firstName, 
+        firstName: firstName,
         lastName: lastName,
         email: email,
-        phoneNUmber: phoneNUmber, 
+        phoneNUmber: phoneNUmber,
         country: country,
         cityName: cityName,
         postalCode: postalCode,
@@ -151,7 +151,7 @@ const OrderPage = () => {
       }
     }
   };
- 
+
   const calculateSubtotal = () => {
     let subtotal = 0;
     for (const product of productsWithDetails) {
@@ -174,12 +174,11 @@ const OrderPage = () => {
     });
   };
   const closeModal = () => {
-    setIsLoggedIn(false)
+    setIsLoggedIn(false);
     setShowModal(false);
   };
 
   return (
-    
     <div className="orderPage">
       <MenuBar />
       <div className="orderContainer">
@@ -574,11 +573,11 @@ const OrderPage = () => {
                 placeholder="Street Address"
                 onChange={(e) => setStreetAddress(e.target.value)}
               />
-              <div className="buttonorder"> 
-              <button className="placeOrderBtn" onClick={handleAddShipping}>
-                {" "}
-                Place Order
-              </button>
+              <div className="buttonorder">
+                <button className="placeOrderBtn" onClick={handleAddShipping}>
+                  {" "}
+                  Place Order
+                </button>
               </div>
             </div>
           </div>

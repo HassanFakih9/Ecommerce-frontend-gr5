@@ -18,10 +18,9 @@ const VendorAddProduct = () => {
       const data = await response.json();
 
       if (response.ok) {
-       
         const vendorName = data.name + data.lastName;
-        localStorage.setItem('vendorName', vendorName)
-        console.log('vendor Name is ' + vendorName)
+        localStorage.setItem("vendorName", vendorName);
+        console.log("vendor Name is " + vendorName);
       } else {
         console.error("Error:", data.message);
       }
@@ -51,7 +50,7 @@ const VendorAddProduct = () => {
       description,
       price,
       category,
-      vendorName:vendorName,
+      vendorName: vendorName,
       image,
       quantity,
     };

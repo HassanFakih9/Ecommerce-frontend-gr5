@@ -20,7 +20,7 @@ const ProductsPage = () => {
 
       const response = await axios.get(url);
       const modifiedProducts = response.data.map((product) => ({
-        id:product._id,
+        id: product._id,
         name: product.name,
         image: product.image,
         price: product.price,
@@ -89,12 +89,12 @@ const ProductsPage = () => {
         ) : (
           products.map((product, index) => (
             <ProductComponent
-            key={product.id} 
-            id={product.id} 
-            name={product.name}
-            price={product.price}
-            image={product.image}
-          />
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              price={product.price}
+              image={product.image}
+            />
           ))
         )}
       </div>

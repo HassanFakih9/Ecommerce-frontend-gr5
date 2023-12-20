@@ -22,7 +22,6 @@ const ShippingDetails = () => {
     axios
       .delete(`http://localhost:8000/shipping/deleteShippingById/${id}`)
       .then((response) => {
-        
         fetchShippingDetails(); // Refresh the cient list after deletion
       })
       .catch((error) => {
@@ -33,19 +32,27 @@ const ShippingDetails = () => {
     fetchShippingDetails();
   }, []);
 
+  const handleUpdateOrder = (id) => {
+    axios
+      .put(`http://localhost:8000/shipping/cancelShipping`, { shippingId: id })
+      .then((response) => {
+        fetchShippingDetails(); // Refresh the client list after updating order
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
   return (
-  
-       
     <div className="AdminVendors">
-        <div className="back">
-          <Link to="/">
-            <img src={back} className="back-img" />
-          </Link>
-        </div>
+      <div className="back">
+        <Link to="/">
+          <img src={back} className="back-img" />
+        </Link>
+      </div>
       <div className="Admin-table">
         <p className="order-title"> Client Shipping Details</p>
 
-        <table className='tableDes'>
+        <table className="tableDes">
           <tr>
             <td>Name</td>
             <td>Last-Name</td>
@@ -73,21 +80,27 @@ const ShippingDetails = () => {
               <td>{shipping.totalPrice} </td>
               <td>{shipping.date} </td>
               <td>{shipping.status} </td>
-           
-              <td><div className="button-containor">
-                <button type="button" className="submitbt">
-                  Update Order
-                </button>
-                <button type="button"
-                 className="productbtn-delete"
-                 onClick={() => handleDelete(shipping._id)}
-                 >
-                Delete Order
-                </button>
-              </div>
+
+              <td>
+                <div className="button-containor">
+                <button
+                      type="button"
+                      className="submitbt"
+                      onClick={() => handleUpdateOrder(shipping._id)}
+                    >
+                      Cancel Order
+                    </button>
+                  <button
+                    type="button"
+                    className="productbtn-delete"
+                    onClick={() => handleDelete(shipping._id)}
+                  >
+                    Delete Order
+                  </button>
+                </div>
               </td>
             </tr>
-            ))}
+          ))}
         </table>
       </div>
     </div>

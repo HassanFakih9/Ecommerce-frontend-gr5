@@ -40,7 +40,6 @@ const AdminProduct = () => {
           selectedProduct
         )
         .then((response) => {
-         
           getAllProducts(); // Refresh the vendor list after update
           handleCloseModal();
         })
@@ -64,7 +63,7 @@ const AdminProduct = () => {
       const response = await axios.delete(
         `http://localhost:8000/products/deleteProductById/${productId}`
       );
-     
+
       getAllProducts();
     } catch (error) {
       console.error(error);
@@ -103,10 +102,10 @@ const AdminProduct = () => {
   return (
     <div>
       <div className="back">
-          <Link to="/">
-            <img src={back} className="back-img" />
-          </Link>
-        </div>
+        <Link to="/">
+          <img src={back} className="back-img" />
+        </Link>
+      </div>
       <div className="product">
         <p className="order-title">Product List</p>
         <div className="enter-product">
@@ -123,7 +122,7 @@ const AdminProduct = () => {
         </div>
 
         <div className="table1">
-          <table className='tableDes'>
+          <table className="tableDes">
             <thead>
               <tr>
                 <th>Name</th>

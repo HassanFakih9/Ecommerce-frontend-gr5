@@ -1,51 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import '../../Style/AdminInfo.css';
-import back from '../../images/back.svg';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import "../../Style/AdminInfo.css";
+import back from "../../images/back.svg";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const AdminCategories = () => {
   const [categories, setCategories] = useState([]);
-  const [newCategory, setNewCategory] = useState('');
+  const [newCategory, setNewCategory] = useState("");
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/category/getAllCategories');
+      const response = await axios.get(
+        "http://localhost:8000/category/getAllCategories"
+      );
       setCategories(response.data);
     } catch (error) {
-      console.error('Error fetching categories:', error);
+      console.error("Error fetching categories:", error);
     }
   };
 
   const addCategory = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/category/addCategory', { category: newCategory });
-      console.log('Category added:', response.data);
+      const response = await axios.post(
+        "http://localhost:8000/category/addCategory",
+        { category: newCategory }
+      );
+      console.log("Category added:", response.data);
       fetchCategories();
-      setNewCategory(''); // Reset input field after adding category
+      setNewCategory(""); // Reset input field after adding category
     } catch (error) {
-      console.error('Error adding category:', error);
+      console.error("Error adding category:", error);
     }
   };
 
   const updateCategory = async (id) => {
     try {
-      
-      const response = await axios.put(`http://localhost:8000/category/updateCategoryById/${id}`, { /* Updated category data */ });
-      console.log('Category updated:', response.data);
+      const response = await axios.put(
+        `http://localhost:8000/category/updateCategoryById/${id}`,
+        {
+          /* Updated category data */
+        }
+      );
+      console.log("Category updated:", response.data);
       fetchCategories();
     } catch (error) {
-      console.error('Error updating category:', error);
+      console.error("Error updating category:", error);
     }
   };
 
   const deleteCategory = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/category/deleteCategoriesById/${id}`);
-      console.log('Category deleted');
+      await axios.delete(
+        `http://localhost:8000/category/deleteCategoriesById/${id}`
+      );
+      console.log("Category deleted");
       fetchCategories();
     } catch (error) {
-      console.error('Error deleting category:', error);
+      console.error("Error deleting category:", error);
     }
   };
 
@@ -75,7 +86,7 @@ const AdminCategories = () => {
           </button>
         </div>
         <div className="table1">
-          <table className='tableDes'>
+          <table className="tableDes">
             <thead>
               <tr>
                 <th>Category</th>
@@ -88,12 +99,20 @@ const AdminCategories = () => {
                 <tr key={category._id}>
                   <td>{category.category}</td>
                   <td>
-                    <button type="button" className="submitbt" onClick={() => updateCategory(category._id)}>
+                    <button
+                      type="button"
+                      className="submitbt"
+                      onClick={() => updateCategory(category._id)}
+                    >
                       Update
                     </button>
                   </td>
                   <td>
-                    <button type="button" className="productbtn-delete" onClick={() => deleteCategory(category._id)}>
+                    <button
+                      type="button"
+                      className="productbtn-delete"
+                      onClick={() => deleteCategory(category._id)}
+                    >
                       Delete
                     </button>
                   </td>

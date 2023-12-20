@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import '../Style/LatesProducts.css';
-import ProductComponent from './ProductComponent';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import "../Style/LatesProducts.css";
+import ProductComponent from "./ProductComponent";
+import axios from "axios";
 
 const LatestProducts = () => {
   const [products, setProducts] = useState([]);
@@ -10,7 +10,9 @@ const LatestProducts = () => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await axios.get('http://localhost:8000/products/getAllProduct');
+        const response = await axios.get(
+          "http://localhost:8000/products/getAllProduct"
+        );
         setProducts(response.data);
       } catch (error) {
         console.error(error);
@@ -22,7 +24,8 @@ const LatestProducts = () => {
 
   const nextSlide = () => {
     const lastIndex = products.length - 1;
-    const newStartIndex = startIndex + 3 <= lastIndex ? startIndex + 3 : lastIndex;
+    const newStartIndex =
+      startIndex + 3 <= lastIndex ? startIndex + 3 : lastIndex;
     setStartIndex(newStartIndex);
   };
 
@@ -32,12 +35,15 @@ const LatestProducts = () => {
   };
 
   return (
-    <div className='latestProducts'>
+    <div className="latestProducts">
       <div className="titleContainer">
         <p className="Title">Everything You Need Right Here</p>
       </div>
-      <div className='product-slider'>
-        <div className='slider-wrapper' style={{ transform: `translateX(-${startIndex * 33.33}%)` }}>
+      <div className="product-slider">
+        <div
+          className="slider-wrapper"
+          style={{ transform: `translateX(-${startIndex * 33.33}%)` }}
+        >
           {products.slice(startIndex, startIndex + 3).map((product) => (
             <ProductComponent
               key={product._id}
@@ -49,14 +55,16 @@ const LatestProducts = () => {
           ))}
         </div>
         <button
-          className={`prev ${startIndex === 0 ? 'disabled' : ''}`}
+          className={`prev ${startIndex === 0 ? "disabled" : ""}`}
           onClick={prevSlide}
           disabled={startIndex === 0}
         >
           &#60;
         </button>
         <button
-          className={`next ${startIndex + 3 >= products.length ? 'disabled' : ''}`}
+          className={`next ${
+            startIndex + 3 >= products.length ? "disabled" : ""
+          }`}
           onClick={nextSlide}
           disabled={startIndex + 3 >= products.length}
         >

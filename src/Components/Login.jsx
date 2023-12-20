@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 const Login = () => {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
@@ -16,7 +15,7 @@ const Login = () => {
   const handleClientLogin = async () => {
     try {
       const response = await axios.post(
-        'http://localhost:8000/client/clientLogin',
+        "http://localhost:8000/client/clientLogin",
         {
           email: emailValue,
           password: passwordValue,
@@ -24,14 +23,14 @@ const Login = () => {
       );
 
       if (response.data && response.data.success) {
-        localStorage.removeItem('email');
-        localStorage.setItem('email', emailValue);
+        localStorage.removeItem("email");
+        localStorage.setItem("email", emailValue);
         setShowModal(true);
       } else {
-        alert('Email or Password entered is not valid');
+        alert("Email or Password entered is not valid");
       }
     } catch (error) {
-      console.error('Login failed:', error.message);
+      console.error("Login failed:", error.message);
     }
   };
 
@@ -64,36 +63,36 @@ const Login = () => {
               <img src={email} className="login-img1" />
 
               <input
-                  type='text'
-                  placeholder='Email'
-                  className='login-input'
-                  onChange={(e) => setEmailValue(e.target.value)}
-                />
-              </div>
+                type="text"
+                placeholder="Email"
+                className="login-input"
+                onChange={(e) => setEmailValue(e.target.value)}
+              />
             </div>
-            <div className="user1">
-              <img src={password} className="login-img" />
-
-              <div className="text">
-              <input
-                  type='password'
-                  placeholder='Password'
-                  className='login-input'
-                  onChange={(e) => setPasswordValue(e.target.value)}
-                />
-              </div>
-            </div>
-
-            <button type='button' className='loginbt' onClick={handleClientLogin}>
-              Log In
-            </button>
-            <p className="loginp">
-              {" "}
-              Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link>
-            </p>
           </div>
+          <div className="user1">
+            <img src={password} className="login-img" />
+
+            <div className="text">
+              <input
+                type="password"
+                placeholder="Password"
+                className="login-input"
+                onChange={(e) => setPasswordValue(e.target.value)}
+              />
+            </div>
+          </div>
+
+          <button type="button" className="loginbt" onClick={handleClientLogin}>
+            Log In
+          </button>
+          <p className="loginp">
+            {" "}
+            Not on E-lectronics ?<Link to="/Signup"> Sign Up </Link>
+          </p>
         </div>
-        {showModal && (
+      </div>
+      {showModal && (
         <div>
           {/* Overlay */}
           <div className="overlay show" onClick={closeModal}></div>
@@ -109,8 +108,7 @@ const Login = () => {
           </div>
         </div>
       )}
-      </div>
-  
+    </div>
   );
 };
 

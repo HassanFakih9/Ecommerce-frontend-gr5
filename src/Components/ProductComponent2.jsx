@@ -12,7 +12,7 @@ const ProductComponent2 = () => {
   const [product, setProduct] = useState(null);
   const { id } = useParams();
   useEffect(() => {
-    fetchProductById(id); 
+    fetchProductById(id);
   }, [id]);
   const fetchProductById = async (productId) => {
     try {

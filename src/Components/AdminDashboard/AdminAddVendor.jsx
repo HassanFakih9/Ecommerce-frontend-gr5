@@ -6,7 +6,7 @@ import phonesvg from "../../images/phone.svg";
 import lastnamesvg from "../../images/lastname.svg";
 import companysvg from "../../images/company.svg";
 import back from "../../images/back.svg";
-import pass from "../../images/password.svg"
+import pass from "../../images/password.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -110,7 +110,6 @@ const AdminInfo = () => {
           </div>
         </div>
 
-    
         <div className="user1">
           <img src={companysvg} className="login-img" />
 

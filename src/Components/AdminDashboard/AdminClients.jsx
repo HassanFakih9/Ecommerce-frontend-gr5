@@ -156,19 +156,6 @@ const AdminClient = () => {
                 setSelectedClient({ ...selectedClient, phone: e.target.value })
               }
             />
-            <p className="product-label"> Copmany</p>
-            <input
-              type="text"
-              className="product-input"
-              value={selectedClient.company || ""}
-              onChange={(e) =>
-                setSelectedClient({
-                  ...selectedClient,
-                  company: e.target.value,
-                })
-              }
-            />
-
             <p className="product-label"> Password</p>
             <input
               type="text"
