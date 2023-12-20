@@ -17,18 +17,6 @@ const AdminOrderDetails = () => {
         console.error("Error:", error);
       });
   };
-
-  const handleDelete = (id) => {
-    axios
-      .delete(`http://localhost:8000/orderDetail/deleteorderDetailById/${id}`)
-      .then((response) => {
-        fetchOrderDetails(); // Refresh the cient list after deletion
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
-
   useEffect(() => {
     fetchOrderDetails();
   }, []);
@@ -81,13 +69,7 @@ const AdminOrderDetails = () => {
                     >
                       Cancel Order
                     </button>
-                  <button
-                    type="button"
-                    className="productbtn-delete"
-                    onClick={() => handleDelete(order._id)}
-                  >
-                    Delete Order
-                  </button>
+                 
                 </div>
               </td>
             </tr>

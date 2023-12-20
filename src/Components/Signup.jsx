@@ -4,7 +4,6 @@ import back from "../images/back.svg";
 import user from "../images/user.svg";
 import lastname from "../images/lastname.svg";
 import password from "../images/password.svg";
-import confpassword from "../images/confirm-password-com.svg";
 import email from "../images/email.svg";
 import phone from "../images/phone.svg";
 import { useEffect, useState } from "react";

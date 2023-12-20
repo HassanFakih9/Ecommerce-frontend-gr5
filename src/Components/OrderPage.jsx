@@ -7,7 +7,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const OrderPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
   const [showModal, setShowModal] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -99,10 +99,11 @@ const OrderPage = () => {
     if (!emailFromLocalStorage) {
       setIsLoggedIn(true);
       setShowModal(false);
-      return;
+      return; // Prevent further execution if not logged in
     } else {
-      const currentDate = new Date().toISOString();
-      const productsIds = cartItems.map((item) => item.id);
+      const currentDate = new Date().toISOString(); // Get current date in ISO format
+
+      const productsIds = cartItems.map((item) => item.id); // Extracting product IDs from cartItems
       const orderDetailBody = {
         email: emailFromLocalStorage,
         producsId: productsIds,
@@ -111,15 +112,15 @@ const OrderPage = () => {
         status: "pending",
       };
       const shippingDetails = {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        phoneNUmber: phoneNUmber,
-        country: country,
-        cityName: cityName,
-        postalCode: postalCode,
-        streetAddress: streetAddress,
-        totalPrice: total,
+        firstName,
+        lastName,
+        email,
+        phoneNUmber,
+        country,
+        cityName,
+        postalCode,
+        streetAddress,
+        totalPrice,
         status: "pending",
       };
 
@@ -141,6 +142,9 @@ const OrderPage = () => {
             orderDetailBody
           );
 
+          console.log("Shipping details added:", response.data);
+          console.log("Order detail added:", orderDetailResponse.data);
+
           setShowModal(true);
         } else {
           throw new Error("Network response was not ok");
@@ -150,6 +154,9 @@ const OrderPage = () => {
         window.alert("Error adding product. Please try again later.");
       }
     }
+  };
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   const calculateSubtotal = () => {
@@ -173,12 +180,9 @@ const OrderPage = () => {
       return updatedCartItems;
     });
   };
-  const closeModal = () => {
-    setIsLoggedIn(false);
-    setShowModal(false);
-  };
 
   return (
+    
     <div className="orderPage">
       <MenuBar />
       <div className="orderContainer">
@@ -231,28 +235,28 @@ const OrderPage = () => {
                 type="text"
                 className="orderInfoCont wid"
                 placeholder="First Name"
-                // value={firstName}
+                value={clientData.firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
               <input
                 type="text"
                 className="orderInfoCont wid"
                 placeholder="Last Name"
-                // value={lastName}
+                value={clientData.lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
               <input
                 type="text"
                 className="orderInfoCont"
                 placeholder="Email"
-                // value={emailFromLocalStorage}
+                value={emailFromLocalStorage}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="text"
                 className="orderInfoCont"
                 placeholder="Phone Number"
-                // value={phoneNUmber}
+                value={clientData.phone}
                 onChange={(e) => setPhoneNUmber(e.target.value)}
               />
             </div>
@@ -573,11 +577,11 @@ const OrderPage = () => {
                 placeholder="Street Address"
                 onChange={(e) => setStreetAddress(e.target.value)}
               />
-              <div className="buttonorder">
-                <button className="placeOrderBtn" onClick={handleAddShipping}>
-                  {" "}
-                  Place Order
-                </button>
+              <div className="buttonorder"> 
+              <button className="placeOrderBtn" onClick={handleAddShipping}>
+                {" "}
+                Place Order
+              </button>
               </div>
             </div>
           </div>

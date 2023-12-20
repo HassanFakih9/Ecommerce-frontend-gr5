@@ -27,7 +27,7 @@ const VendorDashboard = () => {
       };
       const handleLogout=()=>{
         sessionStorage.removeItem('adminEmail');
-        window.location.href='/admin';
+        window.location.href='/vendor';
       }
   return (
     <div className="dashboard-container">

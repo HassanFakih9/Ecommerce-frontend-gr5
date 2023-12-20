@@ -30,6 +30,7 @@ const Login = () => {
         alert("Email or Password entered is not valid");
       }
     } catch (error) {
+      alert("Email or Password entered is not valid");
       console.error("Login failed:", error.message);
     }
   };

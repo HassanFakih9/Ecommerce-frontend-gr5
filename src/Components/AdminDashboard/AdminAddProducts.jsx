@@ -30,6 +30,7 @@ const AdminAddProducts = () => {
       category,
       vendorName,
       image,
+      category,
       quantity,
     };
 
